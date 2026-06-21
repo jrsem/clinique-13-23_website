@@ -22,17 +22,17 @@ const departmentDoctors: Record<string, { id: string, name: string }[]> = {
 };
 
 const formSchema = z.object({
-  full_name: z.string().min(2, "Full name is required"),
-  age: z.string().regex(/^\d+$/, "Age must be a valid number"),
-  gender: z.string().min(1, "Select a gender"),
-  phone_number: z.string().min(8, "Valid phone number is required"),
+  full_name: z.string().min(2, "Nom complet est requis"),
+  age: z.string().regex(/^\d+$/, "Age doit etre un nombre"),
+  gender: z.string().min(1, "Choisir sexe a gender"),
+  phone_number: z.string().min(8, "telephon est requis"),
   
-  department: z.string().min(1, "Select a department"),
-  doctor: z.string().min(1, "Select a doctor"),
-  previously_attended: z.string().min(1, "Please select an option"),
+  department: z.string().min(1, "Choisir un department"),
+  doctor: z.string().min(1, "Choisir un medecin"),
+  previously_attended: z.string().min(1, "Choisir un option"),
 
-  appointment_date: z.string().min(1, "Date is required"),
-  appointment_time: z.string().min(1, "Time is required"),
+  appointment_date: z.string().min(1, "Date est requis"),
+  appointment_time: z.string().min(1, "L'heure est requise"),
   message: z.string().optional(),
 })
 
@@ -74,7 +74,7 @@ const RendezVous = () => {
   }
 
   return (
-    <section className='w-full bg-[#EDF4F8] py-16'>
+    <section className='w-full bg-[#EDF4F8] py-18'>
       <div className="max-w-7xl mx-auto shadow-2xl rounded-lg overflow-hidden flex flex-col md:flex-row" data-purpose="booking-container" id="appointment-section">
 
         {/* Image Column */}
@@ -114,7 +114,7 @@ const RendezVous = () => {
             {step === 1 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in slide-in-from-right-4 duration-500">
                 <div>
-                  <input {...register("full_name")} className="input-field w-full h-14 px-4 py-2 rounded-md text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none bg-gray-50 border border-gray-100" placeholder="Full Name" type="text" />
+                  <input {...register("full_name")} className="input-field w-full h-14 px-4 py-2 rounded-md text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none bg-gray-50 border border-gray-100" placeholder="Nom complet" type="text" />
                   {errors.full_name && <p className="text-red-500 text-xs mt-1">{errors.full_name.message}</p>}
                 </div>
                 <div>
@@ -123,15 +123,15 @@ const RendezVous = () => {
                 </div>
                 <div className="relative">
                   <select {...register("gender")} className="input-field w-full h-14 px-4 py-2 rounded-md appearance-none text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none bg-gray-50 border border-gray-100">
-                    <option value="">Select Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
+                    <option value="">Choisir sexe</option>
+                    <option value="Male">Masculin</option>
+                    <option value="Female">Féminin</option>
+                    {/* <option value="Other">Autre</option> */}
                   </select>
                   {errors.gender && <p className="text-red-500 text-xs mt-1">{errors.gender.message}</p>}
                 </div>
                 <div>
-                  <input {...register("phone_number")} className="input-field w-full h-14 px-4 py-2 rounded-md text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none bg-gray-50 border border-gray-100" placeholder="Phone Number" type="tel" />
+                  <input {...register("phone_number")} className="input-field w-full h-14 px-4 py-2 rounded-md text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none bg-gray-50 border border-gray-100" placeholder="Téléphone" type="tel" />
                   {errors.phone_number && <p className="text-red-500 text-xs mt-1">{errors.phone_number.message}</p>}
                 </div>
               </div>
@@ -151,7 +151,7 @@ const RendezVous = () => {
                 </div>
                 <div className="relative">
                   <select {...register("doctor")} disabled={!selectedDepartment} className="input-field w-full h-14 px-4 py-2 rounded-md appearance-none text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none bg-gray-50 border border-gray-100 disabled:opacity-50">
-                    <option value="">{selectedDepartment ? "Select Doctor" : "Choose Department First"}</option>
+                    <option value="">{selectedDepartment ? "Choisir Docteur" : "Choisir Department d'abord"}</option>
                     {selectedDepartment && departmentDoctors[selectedDepartment]?.map(doc => (
                       <option key={doc.id} value={doc.id}>{doc.name}</option>
                     ))}
@@ -159,7 +159,7 @@ const RendezVous = () => {
                   {errors.doctor && <p className="text-red-500 text-xs mt-1">{errors.doctor.message}</p>}
                 </div>
                 <div className="col-span-1 md:col-span-2">
-                  <p className="text-gray-700 mb-2">Have you previously attended our facilities?</p>
+                  <p className="text-gray-700 mb-2">Avez-vous déjà fréquenté nos installations?</p>
                   <div className="flex gap-6">
                     <label className="flex items-center gap-2 text-gray-600 cursor-pointer">
                       <input type="radio" value="Yes" {...register("previously_attended")} className="text-clinique_bleue focus:ring-clinique_bleue w-4 h-4" /> Yes
@@ -185,7 +185,7 @@ const RendezVous = () => {
                   {errors.appointment_time && <p className="text-red-500 text-xs mt-1">{errors.appointment_time.message}</p>}
                 </div>
                 <div className="col-span-1 md:col-span-2">
-                  <textarea {...register("message")} className="input-field w-full px-4 py-4 rounded-md text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none resize-none bg-gray-50 border border-gray-100" placeholder="Your Message" rows={4}></textarea>
+                  <textarea {...register("message")} className="input-field w-full px-4 py-4 rounded-md text-gray-700 focus:ring-2 focus:ring-clinique_bleue outline-none resize-none bg-gray-50 border border-gray-100" placeholder="Votre Message" rows={4}></textarea>
                 </div>
               </div>
             )}
@@ -194,12 +194,12 @@ const RendezVous = () => {
             <div className="pt-6 flex gap-4 mt-6">
               {step > 1 && (
                 <button type="button" onClick={prevStep} className="cursor-pointer bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-gray-800 px-6 py-3 rounded-full font-bold uppercase tracking-widest text-sm">
-                  Previous
+                  Retour
                 </button>
               )}
               {step < 3 && (
                 <button type="button" onClick={nextStep} className="cursor-pointer bg-clinique_bleue hover:bg-clinique_bleu_fonce transition-colors duration-300 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm ml-auto">
-                  Next Step
+                  Suivant
                 </button>
               )}
               {step === 3 && (
