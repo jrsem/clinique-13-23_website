@@ -85,9 +85,9 @@ export default function DepartmentsSection() {
                 <li key={dept.id}>
                   <button
                     onClick={() => setActiveId(dept.id)}
-                    className={`w-full text-left py-4 px-6 font-semibold transition-colors duration-300 hover:text-[#3fbbc0] ${
+                    className={`w-full text-left py-4 px-6 font-semibold transition-colors duration-300 hover:text-clinique_green ${
                       activeId === dept.id
-                        ? 'text-[#3fbbc0] border-r-[3px] border-[#3fbbc0]'
+                        ? 'text-clinique_rose border-r-[3px] border-clinique_rose'
                         : 'text-[#2c4964]'
                     }`}
                   >
