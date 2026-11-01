@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T17:12:30-04:00",
+  "title": "Design System: Clinique 13-23",
+  "extensions": {
+    "colorMeta": {
+      "clinique-bleue": {
+        "role": "primary",
+        "displayName": "Cobalt Clinique",
+        "canonical": "#162E93",
+        "tonalRamp": [
+          "#091340",
+          "#0F206B",
+          "#162E93",
+          "#2544B8",
+          "#4364D6",
+          "#7592EB",
+          "#B4C6F7",
+          "#EBF0FE"
+        ]
+      },
+      "clinique-bleu-fonce": {
+        "role": "primary",
+        "displayName": "Cobalt Profond",
+        "canonical": "#1E3A8A",
+        "tonalRamp": [
+          "#0C1940",
+          "#152964",
+          "#1E3A8A",
+          "#2B4FB0",
+          "#4A6FD1",
+          "#7C99E5",
+          "#B8CAFA",
+          "#EEF3FE"
+        ]
+      },
+      "clinique-green": {
+        "role": "secondary",
+        "displayName": "Vert Vitalité / Monogramme",
+        "canonical": "#2E6B2E",
+        "tonalRamp": [
+          "#112B11",
+          "#1F4A1F",
+          "#2E6B2E",
+          "#3E8A3E",
+          "#5AA85A",
+          "#86C586",
+          "#BBE2BB",
+          "#ECF7EC"
+        ]
+      },
+      "clinique-rose": {
+        "role": "tertiary",
+        "displayName": "Corail d'Alerte Doux",
+        "canonical": "#F54927",
+        "tonalRamp": [
+          "#4D1206",
+          "#87210C",
+          "#C23215",
+          "#F54927",
+          "#F86F54",
+          "#FA9884",
+          "#FCC5BA",
+          "#FEEEEB"
+        ]
+      },
+      "navy-heading": {
+        "role": "neutral",
+        "displayName": "Marine Ardoise",
+        "canonical": "#2C4964",
+        "tonalRamp": [
+          "#121F2B",
+          "#1F3347",
+          "#2C4964",
+          "#3D6285",
+          "#5880A6",
+          "#82A4C4",
+          "#B7CCE0",
+          "#EDF3F8"
+        ]
+      },
+      "slate-ink": {
+        "role": "neutral",
+        "displayName": "Encre Clinique",
+        "canonical": "#1E293B",
+        "tonalRamp": [
+          "#0F172A",
+          "#1E293B",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#94A3B8",
+          "#CBD5E1",
+          "#F1F5F9"
+        ]
+      },
+      "slate-body": {
+        "role": "neutral",
+        "displayName": "Ardoise de Lecture",
+        "canonical": "#475569",
+        "tonalRamp": [
+          "#0F172A",
+          "#1E293B",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#94A3B8",
+          "#CBD5E1",
+          "#F1F5F9"
+        ]
+      },
+      "slate-muted": {
+        "role": "neutral",
+        "displayName": "Ardoise Secondaire",
+        "canonical": "#64748B",
+        "tonalRamp": [
+          "#0F172A",
+          "#1E293B",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#94A3B8",
+          "#CBD5E1",
+          "#F1F5F9"
+        ]
+      },
+      "ice-canvas": {
+        "role": "neutral",
+        "displayName": "Bleu Glacier Apaisant",
+        "canonical": "#EDF4F8",
+        "tonalRamp": [
+          "#1D3545",
+          "#2F546D",
+          "#467899",
+          "#689BBF",
+          "#94BDD9",
+          "#BEDAEC",
+          "#DCEBF3",
+          "#EDF4F8"
+        ]
+      },
+      "glacier-tint": {
+        "role": "neutral",
+        "displayName": "Brume Azurée",
+        "canonical": "#F0F7FF",
+        "tonalRamp": [
+          "#173252",
+          "#265182",
+          "#3B74B5",
+          "#5E97D6",
+          "#8AB9EB",
+          "#B8D7F7",
+          "#DCEBFC",
+          "#F0F7FF"
+        ]
+      },
+      "sky-badge": {
+        "role": "neutral",
+        "displayName": "Badge Ciel Médical",
+        "canonical": "#EFF6FF",
+        "tonalRamp": [
+          "#1E3A8A",
+          "#1D4ED8",
+          "#2563EB",
+          "#3B82F6",
+          "#60A5FA",
+          "#93C5FD",
+          "#DBEAFE",
+          "#EFF6FF"
+        ]
+      },
+      "portrait-sky": {
+        "role": "neutral",
+        "displayName": "Ciel Portrait Praticien",
+        "canonical": "#E0F2FE",
+        "tonalRamp": [
+          "#0C4A6E",
+          "#075985",
+          "#0369A1",
+          "#0284C7",
+          "#38BDF8",
+          "#7DD3FC",
+          "#BAE6FD",
+          "#E0F2FE"
+        ]
+      },
+      "field-surface": {
+        "role": "neutral",
+        "displayName": "Gris Champ Tactile",
+        "canonical": "#F9FAFB",
+        "tonalRamp": [
+          "#111827",
+          "#1F2937",
+          "#374151",
+          "#4B5563",
+          "#6B7280",
+          "#9CA3AF",
+          "#E5E7EB",
+          "#F9FAFB"
+        ]
+      },
+      "border-subtle": {
+        "role": "neutral",
+        "displayName": "Filet de Bordure Clair",
+        "canonical": "#F1F5F9",
+        "tonalRamp": [
+          "#0F172A",
+          "#1E293B",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#94A3B8",
+          "#E2E8F0",
+          "#F1F5F9"
+        ]
+      },
+      "surface-white": {
+        "role": "neutral",
+        "displayName": "Blanc Pur",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#171717",
+          "#262626",
+          "#404040",
+          "#737373",
+          "#A3A3A3",
+          "#D4D4D4",
+          "#F5F5F5",
+          "#FFFFFF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Hero",
+        "purpose": "Titre d'accroche principal de la bannière Hero."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Titres des grandes sections thématiques (Services, Docteurs, Départements, Rendez-vous)."
+      },
+      "title": {
+        "displayName": "Card & Feature Title",
+        "purpose": "Titres des cartes de services, de triage, noms des médecins et numéros d'urgence."
+      },
+      "body": {
+        "displayName": "Body Copy",
+        "purpose": "Paragraphes descriptifs, informations pratiques et textes de réassurance."
+      },
+      "label": {
+        "displayName": "Eyebrow & Pill Label",
+        "purpose": "Surtitres de section en capitales espacées et libellés des boutons pilules."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nav-frosted",
+        "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+        "purpose": "Ombre discrète sous la barre de navigation fixe translucide (backdrop-blur)."
+      },
+      {
+        "name": "ambient-card",
+        "value": "0 4px 20px rgba(0, 0, 0, 0.03)",
+        "purpose": "Voile d'ombre très doux au repos pour les cartes de services médicales."
+      },
+      {
+        "name": "hover-blue-glow",
+        "value": "0 10px 40px rgba(59, 130, 246, 0.10)",
+        "purpose": "Halo bleuté d'élévation au survol des cartes de services."
+      },
+      {
+        "name": "triage-overlap",
+        "value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
+        "purpose": "Élévation structurelle des 3 cartes de triage chevauchant le bas du Hero."
+      },
+      {
+        "name": "booking-stage",
+        "value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+        "purpose": "Profondeur scénique du conteneur fendu de prise de rendez-vous."
+      }
+    ],
+    "motion": [
+      {
+        "name": "transition-standard",
+        "value": "300ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Transition des couleurs de boutons, bordures d'onglets, ombres de cartes et barre de progression."
+      },
+      {
+        "name": "step-slide-in",
+        "value": "500ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Apparition fluide en fondu et glissement latéral lors du changement d'étape du formulaire."
+      }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "480px" },
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1600px" },
+      { "name": "3xl", "value": "1920px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton Conversion Vitalité (Hero / Confirmer)",
+      "kind": "button",
+      "refersTo": "button-cta-vitality",
+      "description": "Appel à l'action principal en Vert Vitalité basculant vers le Corail d'Alerte Doux au survol.",
+      "html": "<button class=\"ds-btn-vitality\"><span>Prendre un rendez-vous</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-vitality { display: inline-flex; align-items: center; gap: 8px; background: var(--color-clinique_green, #2E6B2E); color: #FFFFFF; padding: 16px 32px; border-radius: 9999px; border: none; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; } .ds-btn-vitality:hover { background: var(--color-clinique_rose, #F54927); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(245, 73, 39, 0.25); } .ds-btn-vitality:focus-visible { outline: 2px solid var(--color-clinique_bleue, #162E93); outline-offset: 2px; }"
+    },
+    {
+      "name": "Bouton Action Primaire (Cobalt Clinique)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Bouton pilule en Cobalt Clinique utilisé pour la progression d'étape et les cartes de triage.",
+      "html": "<button class=\"ds-btn-primary\">Suivant</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--color-clinique_bleue, #162E93); color: #FFFFFF; padding: 12px 32px; border-radius: 9999px; border: none; font-family: Inter, sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; } .ds-btn-primary:hover { background: var(--color-clinique_bleu_fonce, #1E3A8A); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-clinique_bleue, #162E93); outline-offset: 2px; }"
+    },
+    {
+      "name": "Champ de Formulaire Tactile (56px)",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Champ de saisie haut de 56px sur fond gris très doux avec anneau de focus en Cobalt Clinique.",
+      "html": "<div class=\"ds-field-wrap\"><input class=\"ds-input\" type=\"text\" placeholder=\"Nom complet\" /></div>",
+      "css": ".ds-field-wrap { max-width: 320px; font-family: Inter, sans-serif; } .ds-input { width: 100%; height: 56px; padding: 8px 16px; border-radius: 6px; background: #F9FAFB; border: 1px solid #F3F4F6; color: #374151; font-size: 14px; font-family: Inter, sans-serif; outline: none; transition: box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; } .ds-input::placeholder { color: #9CA3AF; } .ds-input:focus, .ds-input:focus-visible { background: #FFFFFF; border-color: var(--color-clinique_bleue, #162E93); box-shadow: 0 0 0 2px var(--color-clinique_bleue, #162E93); }"
+    },
+    {
+      "name": "Carte de Service Médical",
+      "kind": "card",
+      "refersTo": "card-service",
+      "description": "Carte à coins arrondis (16px) avec badge d'icône bleu ciel et halo d'élévation bleuté au survol.",
+      "html": "<div class=\"ds-service-card\"><div class=\"ds-service-icon\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"/></svg></div><div class=\"ds-service-body\"><h3 class=\"ds-service-title\">Médecine Familiale</h3><p class=\"ds-service-desc\">Consultations générales et suivi personnalisé pour toute la famille.</p></div></div>",
+      "css": ".ds-service-card { display: flex; align-items: flex-start; gap: 20px; background: #FFFFFF; padding: 32px; border-radius: 16px; border: 1px solid #F8FAFC; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); font-family: Inter, sans-serif; max-width: 380px; transition: box-shadow 0.3s ease, transform 0.3s ease; } .ds-service-card:hover { box-shadow: 0 10px 40px rgba(59, 130, 246, 0.10); transform: translateY(-2px); } .ds-service-icon { flex-shrink: 0; width: 64px; height: 64px; border-radius: 12px; background: #EFF6FF; color: var(--color-clinique_bleue, #162E93); display: flex; align-items: center; justify-content: center; } .ds-service-title { margin: 0 0 8px 0; font-size: 20px; font-weight: 700; color: #1E293B; transition: color 0.3s ease; } .ds-service-card:hover .ds-service-title { color: var(--color-clinique_bleue, #162E93); } .ds-service-desc { margin: 0; font-size: 14px; line-height: 1.625; color: #64748B; }"
+    },
+    {
+      "name": "Carte de Triage & Urgences (Hero Overlap)",
+      "kind": "card",
+      "refersTo": "card-triage",
+      "description": "Carte d'accès rapide en surplomb du Hero mettant en avant les urgences ou la prise de rendez-vous.",
+      "html": "<div class=\"ds-triage-card\"><div class=\"ds-triage-icon\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z\"/></svg></div><span class=\"ds-triage-kicker\">Urgences &amp; Support</span><h3 class=\"ds-triage-phone\">3450-2653 | 5523-2555</h3><p class=\"ds-triage-text\">Assistance médicale et orientation rapide en cas d'urgence.</p></div>",
+      "css": ".ds-triage-card { display: flex; flex-direction: column; align-items: flex-start; background: #FFFFFF; padding: 32px; border-radius: 2px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); font-family: Inter, sans-serif; max-width: 360px; transition: box-shadow 0.3s ease; } .ds-triage-card:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.1); } .ds-triage-icon { color: var(--color-clinique_rose, #F54927); margin-bottom: 16px; } .ds-triage-kicker { font-size: 12px; color: #64748B; margin-bottom: 4px; } .ds-triage-phone { margin: 0 0 12px 0; font-size: 22px; font-weight: 700; color: #162E93; } .ds-triage-text { margin: 0; font-size: 14px; line-height: 1.6; color: #475569; }"
+    },
+    {
+      "name": "Navigation par Onglets des Départements",
+      "kind": "nav",
+      "refersTo": "nav-departments",
+      "description": "Menu vertical de sélection de département avec bordure active de 3px en Corail d'Alerte Doux.",
+      "html": "<ul class=\"ds-dept-nav\"><li><button class=\"ds-dept-tab ds-dept-tab-active\">Cardiologie</button></li><li><button class=\"ds-dept-tab\">Pédiatrie</button></li><li><button class=\"ds-dept-tab\">Médecine Générale</button></li></ul>",
+      "css": ".ds-dept-nav { list-style: none; margin: 0; padding: 0; width: 240px; border-right: 1px solid #F3F4F6; font-family: Inter, sans-serif; background: #FFFFFF; } .ds-dept-tab { width: 100%; text-align: left; padding: 16px 24px; background: transparent; border: none; border-right: 3px solid transparent; font-size: 15px; font-weight: 600; color: #2C4964; cursor: pointer; transition: color 0.3s ease, border-color 0.3s ease; } .ds-dept-tab:hover { color: var(--color-clinique_green, #2E6B2E); } .ds-dept-tab-active { color: var(--color-clinique_rose, #F54927); border-right-color: var(--color-clinique_rose, #F54927); }"
+    },
+    {
+      "name": "En-tête de Section Signature (Eyebrow + Headline)",
+      "kind": "custom",
+      "refersTo": "section-header",
+      "description": "Surtitre en capitales Corail d'Alerte Doux précédé d'un filet de 48px et suivi d'un titre en Cobalt Clinique.",
+      "html": "<div class=\"ds-sec-header\"><div class=\"ds-sec-eyebrow\"><span class=\"ds-sec-rule\"></span><span class=\"ds-sec-kicker\">Nos Services</span></div><h2 class=\"ds-sec-title\">Des soins professionnels pour votre santé</h2></div>",
+      "css": ".ds-sec-header { font-family: Inter, sans-serif; } .ds-sec-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; } .ds-sec-rule { display: inline-block; width: 48px; height: 2px; background: var(--color-clinique_rose, #F54927); } .ds-sec-kicker { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-clinique_rose, #F54927); } .ds-sec-title { margin: 0; font-size: 32px; font-weight: 700; line-height: 1.25; color: var(--color-clinique_bleue, #162E93); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Reassuring Civic Clinic",
+    "overview": "Le système visuel de la Clinique 13-23 est conçu pour apaiser immédiatement l'anxiété du patient ou du proche qui cherche un soin, un horaire ou un numéro d'urgence. L'architecture privilégie des surfaces blanches lumineuses et des respirations bleu glacier qui évoquent l'hygiène, le calme et l'accessibilité, tout en ponctuant le parcours de repères chromatiques francs issus du monogramme officiel de la clinique.\n\nChaque écran s'organise autour d'une lecture civique et directe : les informations vitales (téléphones d'urgence, horaires d'ouverture, prise de rendez-vous) émergent par superposition structurelle dès le premier regard, tandis que l'exploration des spécialités et le formulaire de demande de consultation accompagnent l'utilisateur pas à pas avec des contrôles tactiles larges et rassurants. Le système rejette toute surcharge décorative, toute froideur hospitalière austère et tout jargon visuel complexe.",
+    "keyCharacteristics": [
+      "Surfaces aérées alternant blanc pur et bleu glacier apaisant pour rythmer la lecture sans lourdeur.",
+      "Dualité identitaire fidèle au logo officiel : autorité médicale en Cobalt Clinique et passage à l'action en Vert Vitalité.",
+      "Signalétique d'attention en Corail d'Alerte Doux réservée aux amorces de section, icônes de triage et indicateurs d'onglets actifs.",
+      "Composants accueillants, tactiles et guidés : boutons pilules généreux, champs de saisie hauts (56px) et progression étape par étape.",
+      "Élévation hybride combinant voile d'ombre ambiant au repos, halo bleuté au survol et chevauchement franc pour les modules critiques."
+    ],
+    "rules": [
+      {
+        "name": "The Civic Triage Rule",
+        "body": "Le Corail d'Alerte Doux (`clinique-rose`) agit comme un repère d'orientation rapide (filets de surtitre, icônes d'urgence, onglet actif) et ne doit jamais recouvrir de larges surfaces de fond.",
+        "section": "colors"
+      },
+      {
+        "name": "The Monogram Conversion Rule",
+        "body": "Le Vert Vitalité (`clinique-green`) signale le début et l'aboutissement du parcours patient (lancer une demande de rendez-vous, progresser d'une étape, confirmer la demande).",
+        "section": "colors"
+      },
+      {
+        "name": "The Eyebrow Anchor Rule",
+        "body": "Chaque titre de section majeur (`Headline`) est introduit par un surtitre en capitales Corail d'Alerte Doux précédé d'un filet horizontal (`48px × 2px`), offrant un point d'ancrage visuel constant lors du défilement.",
+        "section": "typography"
+      },
+      {
+        "name": "The Blue-Tinted Lift Rule",
+        "body": "Lorsqu'une carte de service s'élève au survol, son ombre adopte une lueur bleutée diffuse (`rgba(59, 130, 246, 0.10)`) plutôt qu'un gris neutre lourd, préservant la fraîcheur lumineuse de l'interface.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do utiliser le couple Cobalt Clinique (#162E93) pour les titres/structures et Vert Vitalité (#2E6B2E) pour les actions principales de conversion afin de refléter fidèlement le logo de la Clinique 13-23.",
+      "Do introduire chaque section principale par le motif signature : filet horizontal de 48px × 2px et surtitre en capitales en Corail d'Alerte Doux (#F54927).",
+      "Do conserver une hauteur minimale de 56px (h-14) sur les champs de saisie et une forme pilule (rounded-full) sur les boutons d'action pour garantir une ergonomie tactile irréprochable sur mobile.",
+      "Do alterner les sections sur fond Blanc Pur (#FFFFFF) et Bleu Glacier Apaisant (#EDF4F8 / #F0F7FF) pour structurer la page avec calme et clarté.",
+      "Do rédiger l'intégralité des libellés, spécialités, messages de validation et descriptions en français clair, rassurant et accessible."
+    ],
+    "donts": [
+      "Don't utiliser le Corail d'Alerte Doux (#F54927) comme couleur d'arrière-plan de section ou de carte ; sa force signalétique repose sur sa rareté (moins de 10 % de la surface visible).",
+      "Don't mélanger des classes de couleurs héritées de gabarits externes non définies dans @theme (comme text-novena-navy, text-brand-primary ou #e12454) lors de la création ou de la mise à jour de composants : utilisez toujours les tokens officiels de la clinique.",
+      "Don't présenter tous les champs du formulaire de rendez-vous d'un seul bloc dense ; préservez le découpage guidé en étapes courtes avec indicateur de progression.",
+      "Don't utiliser des ombres noires dures ou des bordures sombres épaisses sur les cartes médicales ; privilégiez les bordures quasi invisibles (#F1F5F9) et le halo bleuté léger au survol."
+    ]
+  }
+}

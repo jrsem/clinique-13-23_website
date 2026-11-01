@@ -1,67 +1,177 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef } from 'react'
+import Image from 'next/image'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Calendar } from 'lucide-react'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const doctorsList = [
+  {
+    id: 'dr-norman-colins',
+    name: 'Dr. Norman Colins',
+    specialty: 'Neurologie & Système Nerveux',
+    department: 'neurologie',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCiZPKriD7h83pWRRdXKCBXLgILkgCmNU8VvV_W1Ld8MYLwirorH2IxmzZJI69brmH2fZQ0RlMYDed1KzgJ_dnMLLQwzfq6ghYe6OP0zZDAGuFIjiejCusC_uR2Pek4JborlLYLf1_-Fp4UlqWboX8hAOb88A_sW7Pk',
+  },
+  {
+    id: 'dr-steven-lee',
+    name: 'Dr. Steven Lee',
+    specialty: 'Cardiologie & Santé Cardiovasculaire',
+    department: 'cardiologie',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAAD8FFRsx9taFhR0DFnEoQsL80WZIhFrZdyAgh7ebqbWshLrsNhXSlXxbUDjfXoZ9JcWsSHDtyFWbOXWscvYb4qz496E3M9KMY67eeou4muodShVXQTyBQqlzlz0C3Iu6LJngWZ7IgyJ8FWholbV0QwORlIv2-FdSizHfXCMZ_l5dHsXCTFiOYkHiBxQIOfiXE-CACeVg21jrvERbTrnfutaT-kslr_dmvCdIEEaLCcW9ji4vWdUOwZGGG7pzdn6Gyu4SMFvbRR2ZV',
+  },
+  {
+    id: 'dr-david-kim',
+    name: 'Dr. David Kim',
+    specialty: 'Gastro-entérologie & Hépatologie',
+    department: 'hepatologie',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCyI_KbH-KK3qO4d3yIo6tCkhfiQh1540JpUgHCWKgkTLIJG6PIecYylQQMd9ouVe2mfs5uDKyZbxg5iu26bv8T8Zsaig2U4m64J9MKgFbfB3_7Q9m-weBejN6Znqifyz2Nl5vknQtWdzn7chYsdT0-5SY89E3e_HxiMsle_7FffZPp6h6SAPLW0tJgtQcGknCfm6iOa7Gi3-m9cBTjY6nKfbVbnGps2W0r9WwFQvaDwBpZouLReCsK-L5xx6QTxcbreMezLbDNYUkH',
+  },
+  {
+    id: 'dr-sarah-lee',
+    name: 'Dr. Sarah Lee',
+    specialty: 'Ophtalmologie & Soins de la Vue',
+    department: 'ophtalmologie',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBFhM_fD-UIlJxwx_fMER6Zk8M9tB8Z6-rQzoKeev3p0Z7WIerb4P_3-0Jp2N2W1qKec-MEyzHP3CGDbLj4SvGE3lnOQcXKRV-bFO7Lc05PGobW94-0VDwbsWyjuypA37lSx3_9QuTc0ye8LJ7tggOxaGtD3EnVkQEnNPSdQ1DyhkoDY-eLgFfnLWREYR7lInllEEF9DJVUuZDCBDagbevAMrSRYbN03EiFt7gXOa-TmjF_gi3p8taNh0vfz8rNOXp4ARdMb8d0akaa',
+  },
+]
 
 const Team = () => {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return
+
+    const mm = gsap.matchMedia()
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.from('[data-gsap="doctor-card"]', {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          once: true,
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.08,
+        ease: 'expo.out',
+        clearProps: 'transform,opacity',
+      })
+    })
+
+    return () => mm.revert()
+  }, [])
+
+  const handleSelectDoctor = (departmentId: string, doctorId: string) => {
+    window.dispatchEvent(
+      new CustomEvent('clinique:select-department', {
+        detail: { department: departmentId, doctor: doctorId },
+      })
+    )
+    const section = document.getElementById('appointment-section')
+    section?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
-    < div className=" py-24 bg-white">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6" data-purpose="main-header">
-    <div className="space-y-2">
-    <div className="flex items-center gap-2">
-    <div className="h-[2px] w-12 bg-clinique_rose"></div>
-    <span className="text-clinique_rose font-medium text-sm">Docteurs</span>
-    </div>
-    <h1 className="text-3xl md:text-4xl font-bold text-clinique_bleue">Rencontrez Nos Médecins Expérimentés</h1>
-    </div>
-    </header>
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 px-8">
-{/* <!-- BEGIN: DoctorGrid --> */}
-<section className="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6" data-purpose="doctors-listing">
-{/* <!-- Doctor Card 1 --> */}
-<article className="doctor-card bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex flex-col items-center text-center">
-<div className="w-full aspect-square bg-[#e0f2fe] rounded-lg mb-4 overflow-hidden">
-<img alt="Dr. Norman Colins" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_UHByOZYxng5abKFu_zowXSH8roh1zVYimwJ1xo3bFhRnXlAovES2xrI27wKec1HVgQFkz840bNjHGguv3Qh6GDBQQmp71VZiRaL0R-ebeIsHzj14_cJFl0GgW7Ctlb4vZ3MCBNJUTCNW6VGrY0bl787uqiHFSsdtvjoMji7hb-zFyNlNRgoLx1Ig81tFrKTyjrPcNXgNrnYY5zM4_TXpOAP4xAonDi3wnz_5T2Q8brt6-_OHvWxeLBWXDCAIFdZL69p6gEpOpCiB"/>
-</div>
-<h3 className="text-lg font-bold text-[#1e293b]">Dr. Norman Colins</h3>
-<p className="text-slate-400 text-sm mb-4">Dental Surgeon</p>
-{/* <button className="w-full py-2.5 bg-clinique_bleue hover:bg-clinique_bleue text-white rounded-lg font-medium transition-colors">Prendre rendez-vous</button> */}
-</article>
-{/* <!-- Doctor Card 2 --> */}
-<article className="doctor-card bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex flex-col items-center text-center">
-<div className="w-full aspect-square bg-[#e0f2fe] rounded-lg mb-4 overflow-hidden">
-<img alt="Dr. Steven Lee" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-ebJ1PZKq8MhsXIGeMiMFWu8Qb0ZA2Mi9IBmAphV6OgWGf7pGUUoD-opVCq4hFnb7kePTeehBn9nYvxMiia8l4Kh0ehJEhybIciWnelH1t6DdOyUr-89p0C9oVWlayQLA_bfuMU_xIMQQMr5TUxD1NxtjJveIQStgLkMxdUqNlMOx-X3GrtnzPgDQJCBUqyZLYCUA9Ju263Zbbm_2pcB0Ze6PgzJB4-OcucQsABtcB-d74a0y4JQ8WWRtvMqdHCv8AChi7C6MMIaF"/>
-</div>
-<h3 className="text-lg font-bold text-[#1e293b]">Dr. Steven Lee</h3>
-<p className="text-slate-400 text-sm mb-4">Cardiology</p>
-{/* <button className="w-full py-2.5 bg-clinique_bleue hover:bg-clinique_bleue text-white rounded-lg font-medium transition-colors">Prendre rendez-vous</button> */}
-</article>
-{/* <!-- Doctor Card 3 --> */}
-<article className="doctor-card bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex flex-col items-center text-center">
-<div className="w-full aspect-square bg-[#e0f2fe] rounded-lg mb-4 overflow-hidden">
-<img alt="Dr. David Kim" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoUu_IXwHVvy0a-A5H9Q9VmLRL-qRMi8xTTz0DQH7V19gO9GNrciuKRJnviEfRvWn-gTX-eeZsqU5Ui4gWW4TpwXW9uy1j4p56fLP7rbyEBASHux7wqIvHNEg8MFLNNLBCCQt9fG2HUdyGYImybdk4BIAou8aBCHyeAK0qWw5Q7YrfrCyADCUUYjUg_12W3KlYZxbS8WbeQJimuijMjhC3Nk0ACopDc42jr82ZUc-Qlxf5oRT8aUn5Ghjk9yK-d097i8CPMYAWk6sP"/>
-</div>
-<h3 className="text-lg font-bold text-[#1e293b]">Dr. David Kim</h3>
-<p className="text-slate-400 text-sm mb-4">Dental Surgeon</p>
-{/* <button className="w-full py-2.5 bg-clinique_bleue hover:bg-clinique_bleue text-white rounded-lg font-medium transition-colors">Prendre rendez-vous</button> */}
-</article>
-{/* <!-- Doctor Card 4 --> */}
-<article className="doctor-card bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex flex-col items-center text-center">
-<div className="w-full aspect-square bg-[#e0f2fe] rounded-lg mb-4 overflow-hidden">
-<img alt="Dr. Sarah Lee" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARVUstHb2FbNaakW1cSSBEGQ_wSHDJoLxYP32Alxxa_9czuRe5Q628kT9xP0MZZRBvFdWgt2KWt_DAqGbqL2-dp8FjrbWAqgn45ALZXSzh6tVxo5WqZLPaOen-WKZTFZtM1B0XAmM8SLtPHl0NHoBsGcB9S0MsgFrRR-3HAvWj4W3iGwxptm7VmNe5elXMJ0oZ6R3CMtj96E0_2djq-unc9cIQdzmRkiIiZAWeYIDM_6V2Ils10dDAtSlDXHjI_aWVhiiZh-5z3XOy"/>
-</div>
-<h3 className="text-lg font-bold text-[#1e293b]">Dr. Sarah Lee</h3>
-<p className="text-slate-400 text-sm mb-4">Dermatologist</p>
-{/* <button className="w-full py-2.5 bg-clinique_bleue hover:bg-clinique_bleue text-white rounded-lg font-medium transition-colors">Prendre rendez-vous</button> */}
-</article>
+    <section
+      ref={sectionRef}
+      className="py-16 md:py-24 bg-glacier-tint"
+      id="doctors"
+      data-purpose="doctors-section"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6"
+          data-purpose="main-header"
+        >
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="h-[2px] w-12 bg-clinique_rose" aria-hidden="true"></div>
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
+                Corps Médical
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-clinique_bleue">
+              Rencontrez Nos Médecins Spécialistes
+            </h2>
+            <p className="text-slate-600 text-base mt-3 max-w-2xl">
+              Une équipe médicale expérimentée, attentive et engagée pour un suivi personnalisé.
+            </p>
+          </div>
+        </header>
 
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
+          data-purpose="doctors-listing"
+        >
+          {doctorsList.map((doc) => (
+            <article
+              key={doc.id}
+              data-gsap="doctor-card"
+              className="doctor-card bg-white rounded-xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] transition-all duration-300 border border-slate-100 flex flex-col items-center text-center min-w-0"
+            >
+              <div className="relative w-full aspect-square bg-portrait-sky rounded-lg mb-4 overflow-hidden">
+                <Image
+                  alt={`Portrait de ${doc.name}, spécialiste en ${doc.specialty}`}
+                  className="object-cover"
+                  src={doc.image}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 break-words">{doc.name}</h3>
+              <p className="text-slate-600 text-sm font-medium mt-1 mb-5">{doc.specialty}</p>
+              <button
+                type="button"
+                onClick={() => handleSelectDoctor(doc.department, doc.id)}
+                aria-label={`Prendre rendez-vous avec ${doc.name} en ${doc.specialty}`}
+                className="cursor-pointer w-full py-3 px-4 bg-clinique_bleue hover:bg-clinique_bleu_fonce text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors mt-auto inline-flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue"
+              >
+                <Calendar className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />
+                <span>Prendre rendez-vous</span>
+              </button>
+            </article>
+          ))}
+        </div>
 
-</section>
-{/* <!-- END: DoctorGrid --> */}
-{/* <!-- BEGIN: SidebarForm --> */}
-
-    {/* END: SidebarForm */}
-</div>
-</div>
- </div> )
+        {/* Family Medicine & Pediatrics Direct Referral Bar */}
+        <div className="mt-8 bg-white rounded-xl border border-slate-100 p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+          <div>
+            <h3 className="text-base font-bold text-slate-900">
+              Médecine Familiale &amp; Pédiatrie
+            </h3>
+            <p className="text-sm text-slate-600 mt-0.5">
+              Consultations assurées par Dr.&nbsp;Marc Jean-Baptiste, Dr.&nbsp;Claire Pierre-Louis (Médecine Familiale), Dr.&nbsp;Nadia Wilson et Dr.&nbsp;Patrick Brown (Pédiatrie).
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2.5 flex-shrink-0">
+            <button
+              type="button"
+              onClick={() => handleSelectDoctor('medecine-familiale', 'dr-jean-baptiste')}
+              className="cursor-pointer rounded-full bg-sky-badge hover:bg-blue-100 border border-blue-200 px-4 py-2 text-xs font-bold text-clinique_bleue transition-colors"
+            >
+              Médecine Familiale
+            </button>
+            <button
+              type="button"
+              onClick={() => handleSelectDoctor('pediatrie', 'dr-wilson')}
+              className="cursor-pointer rounded-full bg-sky-badge hover:bg-blue-100 border border-blue-200 px-4 py-2 text-xs font-bold text-clinique_bleue transition-colors"
+            >
+              Pédiatrie
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Team

@@ -129,11 +129,150 @@
   --color-clinique_green: #2E6B2E;
   --color-clinique_bleu_fonce: #1E3A8A;
   --color-clinique_rose: #F54927;
- 
+  --color-ice-canvas: #EDF4F8;
+  --color-glacier-tint: #F0F7FF;
+  --color-sky-badge: #EFF6FF;
+  --color-portrait-sky: #E0F2FE;
+  --color-navy-heading: #2C4964;
 
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
+@keyframes stepEnterForward {
+  from {
+    opacity: 0;
+    transform: translate3d(14px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
+@keyframes stepEnterBackward {
+  from {
+    opacity: 0;
+    transform: translate3d(-14px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes badgeConfirm {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -4px, 0) scale(0.97);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1.015);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes checkPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes subtleNudge {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  75% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn var(--duration-normal) var(--ease-out-expo) both;
+}
+
+.animate-step-forward {
+  animation: stepEnterForward var(--duration-normal) var(--ease-out-expo) both;
+}
+
+.animate-step-backward {
+  animation: stepEnterBackward var(--duration-normal) var(--ease-out-expo) both;
+}
+
+.animate-badge-confirm {
+  animation: badgeConfirm var(--duration-slow) var(--ease-out-expo) both;
+}
+
+.animate-check-pop {
+  animation: checkPop 360ms var(--ease-out-expo) both;
+}
+
+.animate-error-nudge {
+  animation: subtleNudge 180ms var(--ease-out-quart);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fadeIn,
+  .animate-step-forward,
+  .animate-step-backward,
+  .animate-badge-confirm,
+  .animate-check-pop {
+    animation-duration: 150ms !important;
+    animation-name: reducedFadeOnly !important;
+  }
+
+  .animate-error-nudge {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 120ms !important;
+  }
+}
+
+@keyframes reducedFadeOnly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @layer base {
@@ -141,24 +280,54 @@
     @apply border-border outline-ring/50;
   }
 
+  ::selection {
+    background-color: #162E93;
+    color: #FFFFFF;
+  }
+
   body {
     @apply bg-background text-foreground;
+    caret-color: #162E93;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   html {
     @apply font-sans;
+    -webkit-text-size-adjust: 100%;
   }
 }
 
-  .section-title-underline {
-      position: relative;
-    }
-    .section-title-underline::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-      width: 40px;
-      height: 2px;
-      background-color: #e12454;
-    }
+@media (pointer: coarse) {
+  button,
+  [role="tab"],
+  input,
+  select {
+    min-height: 44px;
+  }
+}
+
+@media (hover: none) {
+  .group:active {
+    transform: scale(0.995);
+  }
+}
+
+.section-title-underline {
+  position: relative;
+}
+.section-title-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-clinique_rose);
+}

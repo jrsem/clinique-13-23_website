@@ -6,12 +6,12 @@ import RendezVous from "@/components/RendezVous";
 
 export default function Home() {
   return (
-    <div className="pt-20">
+    <main className="pt-20">
        <Hero2/>
        <Services/>
        <Team/>
        <Department/>
        <RendezVous/>
-    </div>
+    </main>
   );
 }
