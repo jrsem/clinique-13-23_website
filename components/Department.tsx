@@ -146,18 +146,22 @@ export default function DepartmentsSection() {
 
     const mm = gsap.matchMedia()
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.from(section.querySelector('[data-gsap="dept-container"]'), {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          once: true,
-        },
-        y: 28,
-        opacity: 0,
-        duration: 0.6,
-        ease: 'expo.out',
-        clearProps: 'transform,opacity',
-      })
+      gsap.fromTo(
+        section.querySelector('[data-gsap="dept-container"]'),
+        { y: 32, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          ease: 'power2.out',
+        }
+      )
     })
 
     return () => mm.revert()

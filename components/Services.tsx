@@ -69,19 +69,42 @@ const Services = () => {
 
     const mm = gsap.matchMedia()
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.from('[data-gsap="service-card"]', {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          once: true,
-        },
-        y: 24,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.08,
-        ease: 'expo.out',
-        clearProps: 'transform,opacity',
-      })
+      // Heading entrance on scroll down & up
+      gsap.fromTo(
+        section.querySelector('[data-gsap="services-heading"]'),
+        { y: 24, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: 'power2.out',
+        }
+      )
+
+      // Bidirectional ScrollTrigger: triggers smoothly on scroll down AND scroll up
+      gsap.fromTo(
+        section.querySelectorAll('[data-gsap="service-card"]'),
+        { y: 32, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 75%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.55,
+          stagger: 0.08,
+          ease: 'power2.out',
+        }
+      )
     })
 
     return () => mm.revert()
@@ -101,7 +124,7 @@ const Services = () => {
     <section ref={sectionRef} id="services" className="py-16 md:py-24 bg-white" data-purpose="departments-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="mb-12 md:mb-16">
+        <div data-gsap="services-heading" className="mb-12 md:mb-16">
           <div className="flex items-center gap-3 mb-3">
             <div className="h-[2px] w-12 bg-clinique_rose" aria-hidden="true"></div>
             <span className="text-xs font-bold uppercase tracking-wider text-slate-600">

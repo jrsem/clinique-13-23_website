@@ -52,19 +52,60 @@ const Team = () => {
 
     const mm = gsap.matchMedia()
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.from('[data-gsap="doctor-card"]', {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          once: true,
-        },
-        y: 20,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.08,
-        ease: 'expo.out',
-        clearProps: 'transform,opacity',
-      })
+      // Header entrance
+      gsap.fromTo(
+        section.querySelector('[data-gsap="doctors-heading"]'),
+        { y: 24, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: 'power2.out',
+        }
+      )
+
+      // Doctors cards entrance on scroll down & up
+      gsap.fromTo(
+        section.querySelectorAll('[data-gsap="doctor-card"]'),
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 75%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.55,
+          stagger: 0.08,
+          ease: 'power2.out',
+        }
+      )
+
+      // Bottom referral bar entrance
+      gsap.fromTo(
+        section.querySelector('[data-gsap="referral-bar"]'),
+        { y: 20, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 65%',
+            end: 'bottom 10%',
+            toggleActions: 'play reverse play reverse',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power2.out',
+        }
+      )
     })
 
     return () => mm.revert()
@@ -89,6 +130,7 @@ const Team = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header
+          data-gsap="doctors-heading"
           className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6"
           data-purpose="main-header"
         >
@@ -143,7 +185,10 @@ const Team = () => {
         </div>
 
         {/* Family Medicine & Pediatrics Direct Referral Bar */}
-        <div className="mt-8 bg-white rounded-xl border border-slate-100 p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+        <div
+          data-gsap="referral-bar"
+          className="mt-8 bg-white rounded-xl border border-slate-100 p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
+        >
           <div>
             <h3 className="text-base font-bold text-slate-900">
               Médecine Familiale &amp; Pédiatrie

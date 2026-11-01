@@ -3,7 +3,10 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { CalendarPlus, Clock, PhoneCall, ChevronRight, ChevronLeft, Pause, Play } from 'lucide-react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const heroSlides = [
   {
@@ -36,6 +39,7 @@ const Hero2 = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const rootRef = useRef<HTMLDivElement>(null)
+  const heroSectionRef = useRef<HTMLElement>(null)
   const slideContentRef = useRef<HTMLDivElement>(null)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
@@ -67,34 +71,92 @@ const Hero2 = () => {
     }
   }, [isPlaying, nextSlide])
 
-  // GSAP animation when the slide changes
+  // Expressive GSAP text entrance on slide transition
   useEffect(() => {
-    if (!slideContentRef.current) return
+    const content = slideContentRef.current
+    if (!content) return
 
     const mm = gsap.matchMedia()
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.fromTo(
-        slideContentRef.current,
-        { opacity: 0, y: 12 },
-        { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out', clearProps: 'transform' }
+      const eyebrow = content.querySelector('[data-gsap="slide-eyebrow"]')
+      const title = content.querySelector('[data-gsap="slide-title"]')
+      const desc = content.querySelector('[data-gsap="slide-desc"]')
+      const ctas = content.querySelector('[data-gsap="slide-cta"]')
+
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+
+      tl.fromTo(
+        eyebrow,
+        { opacity: 0, x: -16 },
+        { opacity: 1, x: 0, duration: 0.45, clearProps: 'transform' }
       )
+        .fromTo(
+          title,
+          { opacity: 0, y: 22, clipPath: 'inset(0% 0% 100% 0%)' },
+          { opacity: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)', duration: 0.65, ease: 'expo.out', clearProps: 'transform,clipPath' },
+          '-=0.3'
+        )
+        .fromTo(
+          desc,
+          { opacity: 0, y: 14 },
+          { opacity: 1, y: 0, duration: 0.55, clearProps: 'transform' },
+          '-=0.35'
+        )
+        .fromTo(
+          ctas,
+          { opacity: 0, scale: 0.96 },
+          { opacity: 1, scale: 1, duration: 0.45, clearProps: 'transform' },
+          '-=0.3'
+        )
     })
 
     return () => mm.revert()
   }, [currentSlide])
 
-  // Initial GSAP load animation for Hero triage cards
+  // Scroll parallax & opacity fade on the Hero text and background as the user scrolls down
   useEffect(() => {
-    const root = rootRef.current
-    if (!root) return
+    const heroSection = heroSectionRef.current
+    const content = slideContentRef.current
+    if (!heroSection || !content) return
 
     const mm = gsap.matchMedia()
     mm.add('(prefers-reduced-motion: no-preference)', () => {
+      // Parallax scroll on the hero text
+      gsap.to(content, {
+        scrollTrigger: {
+          trigger: heroSection,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+        y: 80,
+        opacity: 0.3,
+        ease: 'none',
+      })
+
+      // Parallax on the background images
+      gsap.to(heroSection.querySelectorAll('.hero-bg-layer'), {
+        scrollTrigger: {
+          trigger: heroSection,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+        y: 60,
+        ease: 'none',
+      })
+
+      // Triage cards reveal on scroll
       gsap.from('[data-gsap="triage-card"]', {
-        y: 20,
+        scrollTrigger: {
+          trigger: '[data-purpose="triage-section"]',
+          start: 'top 85%',
+          once: true,
+        },
+        y: 30,
         opacity: 0,
-        duration: 0.55,
-        stagger: 0.08,
+        duration: 0.6,
+        stagger: 0.1,
         ease: 'expo.out',
         clearProps: 'transform,opacity',
       })
@@ -108,6 +170,7 @@ const Hero2 = () => {
   return (
     <div ref={rootRef} className="relative">
       <section
+        ref={heroSectionRef}
         className="relative h-[600px] sm:h-[660px] lg:h-[720px] flex items-center overflow-hidden"
         data-purpose="hero-carousel"
         aria-roledescription="carousel"
@@ -116,7 +179,7 @@ const Hero2 = () => {
         onMouseLeave={() => setIsPlaying(true)}
       >
         {/* Background Images with Cross-Fade - Full bleed edge-to-edge */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 hero-bg-layer">
           {heroSlides.map((slide, idx) => (
             <div
               key={slide.image}
@@ -134,9 +197,9 @@ const Hero2 = () => {
               />
             </div>
           ))}
-          {/* Option A: Rich deep overlay preserving 100% of the image visibility while providing contrast */}
+          {/* Subtle cinematic overlay preserving 100% of the photo visibility with crisp text readability */}
           <div
-            className="absolute inset-0 bg-slate-950/55 md:bg-slate-950/45 mix-blend-multiply z-10"
+            className="absolute inset-0 bg-slate-950/50 md:bg-slate-950/40 mix-blend-multiply z-10"
             aria-hidden="true"
           />
           <div
@@ -148,22 +211,31 @@ const Hero2 = () => {
         {/* Slide Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-20 w-full">
           <div ref={slideContentRef} className="max-w-xl min-w-0">
-            <div className="flex items-center gap-3 mb-4">
+            <div data-gsap="slide-eyebrow" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-1 bg-clinique_rose" aria-hidden="true"></div>
               <span className="text-xs font-bold uppercase tracking-wider text-rose-300 drop-shadow-sm">
                 {activeSlide.ruleLabel}
               </span>
             </div>
 
-            <h1 className="text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white leading-tight mb-6 break-words drop-shadow-md">
+            <h1
+              data-gsap="slide-title"
+              className="text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white leading-tight mb-6 break-words drop-shadow-md"
+            >
               {activeSlide.title}
             </h1>
 
-            <p className="text-slate-100 text-base sm:text-lg mb-8 leading-relaxed max-w-lg drop-shadow-sm">
+            <p
+              data-gsap="slide-desc"
+              className="text-slate-100 text-base sm:text-lg mb-8 leading-relaxed max-w-lg drop-shadow-sm"
+            >
               {activeSlide.description}
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-4">
+            <div
+              data-gsap="slide-cta"
+              className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-4"
+            >
               <a
                 className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-clinique_green text-white px-7 py-4 rounded-full font-bold uppercase text-xs tracking-wider hover:bg-clinique_rose focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition duration-300 shadow-lg"
                 href="#appointment-section"
@@ -237,6 +309,7 @@ const Hero2 = () => {
 
       {/* Triage Cards Section overlapping Hero */}
       <section
+        data-purpose="triage-section"
         aria-labelledby="triage-heading"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 sm:-mt-12 mb-12 relative z-20"
       >
