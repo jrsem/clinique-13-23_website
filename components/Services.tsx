@@ -145,30 +145,32 @@ const Services = () => {
             <div
               key={id}
               data-gsap="service-card"
-              className="group bg-white p-8 rounded-2xl border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] transition-all duration-300 min-w-0 flex flex-col justify-between"
+              className="group bg-white p-7 sm:p-8 rounded-2xl border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_36px_rgba(26,54,93,0.08)] hover:-translate-y-1 transition-all duration-300 min-w-0 flex flex-col justify-between"
               data-purpose="department-card"
             >
-              <div className="flex items-start space-x-5">
-                <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-sky-badge flex items-center justify-center text-clinique_bleue">
-                  <Icon className="w-8 h-8" strokeWidth={1.75} aria-hidden="true" />
-                </div>
-                <div className="min-w-0">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-clinique_bleue transition-colors break-words">
+              <div>
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-sky-badge flex items-center justify-center text-clinique_bleue group-hover:bg-blue-100 transition-colors">
+                    <Icon className="w-7 h-7" strokeWidth={1.75} aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-clinique_bleue transition-colors break-words">
                     {title}
                   </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                    {description}
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => handleSelectService(id)}
-                    aria-label={`Choisir ${title} pour prendre rendez-vous`}
-                    className="cursor-pointer inline-flex items-center gap-1.5 py-2 text-xs font-bold uppercase tracking-wider text-clinique_bleue hover:text-clinique_green transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue rounded-sm"
-                  >
-                    <span>Demander un rendez-vous</span>
-                    <ChevronRight className="w-3.5 h-3.5" strokeWidth={2.25} aria-hidden="true" />
-                  </button>
                 </div>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                  {description}
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-100/70 mt-auto">
+                <button
+                  type="button"
+                  onClick={() => handleSelectService(id)}
+                  aria-label={`Choisir ${title} pour prendre rendez-vous`}
+                  className="cursor-pointer inline-flex items-center gap-1.5 py-1 text-xs font-bold uppercase tracking-wider text-clinique_bleue hover:text-clinique_green transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue rounded-sm"
+                >
+                  <span>Demander un rendez-vous</span>
+                  <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" strokeWidth={2.25} aria-hidden="true" />
+                </button>
               </div>
             </div>
           ))}

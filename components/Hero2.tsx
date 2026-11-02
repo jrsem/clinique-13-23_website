@@ -171,7 +171,7 @@ const Hero2 = () => {
     <div ref={rootRef} className="relative">
       <section
         ref={heroSectionRef}
-        className="relative h-[600px] sm:h-[660px] lg:h-[720px] flex items-center overflow-hidden"
+        className="relative min-h-[580px] sm:min-h-[640px] lg:h-[720px] flex items-center overflow-hidden"
         data-purpose="hero-carousel"
         aria-roledescription="carousel"
         aria-label="Diaporama d'introduction Clinique 13-23"
@@ -209,7 +209,7 @@ const Hero2 = () => {
         </div>
 
         {/* Slide Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-20 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20 relative z-20 w-full">
           <div ref={slideContentRef} className="max-w-xl min-w-0">
             <div data-gsap="slide-eyebrow" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-1 bg-clinique_rose" aria-hidden="true"></div>
@@ -252,8 +252,8 @@ const Hero2 = () => {
               </a>
             </div>
 
-            {/* Carousel Controls: Indicator Pills & Prev/Next & Play/Pause */}
-            <div className="mt-8 flex items-center gap-4">
+            {/* Carousel Controls: Indicator Pills & Prev/Next & Play/Pause - Hidden on mobile */}
+            <div className="mt-8 hidden sm:flex items-center gap-4">
               <div className="flex items-center gap-2" role="tablist" aria-label="Sélection des diapositives">
                 {heroSlides.map((_, idx) => (
                   <button

@@ -335,26 +335,30 @@ const RendezVous = () => {
         data-purpose="booking-container"
       >
         {/* Image & Emergency Contact Column */}
-        <div className="relative w-full lg:w-5/12 min-h-[260px] sm:min-h-[340px] lg:min-h-[580px] flex flex-col justify-end overflow-hidden" data-purpose="image-column">
-          <Image
-            key={selectedDoctorPhoto}
-            alt={selectedDoctorName ? `Portrait de ${selectedDoctorName} - Clinique 13-23` : "Équipe médicale de la Clinique 13-23 à votre écoute"}
-            className="w-full h-full object-cover object-top absolute inset-0 animate-fadeIn"
-            src={selectedDoctorPhoto}
-            sizes="(max-width: 1024px) 100vw, 42vw"
-            width={600}
-            height={700}
-            priority
-          />
-          <div className="relative z-10 bg-clinique_bleue text-white p-6 md:p-8 flex items-center gap-4" data-purpose="contact-overlay">
-            <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full border-2 border-white/30" aria-hidden="true">
-              <PhoneCall className="h-6 w-6" strokeWidth={2} />
+        <div className="relative w-full lg:w-5/12 flex flex-col justify-end bg-slate-900" data-purpose="image-column">
+          {/* Dedicated photo area: full portrait visibility on mobile, full-height absolute on desktop */}
+          <div className="relative w-full h-[320px] sm:h-[400px] lg:h-full lg:min-h-[580px] lg:absolute lg:inset-0 overflow-hidden bg-portrait-sky">
+            <Image
+              key={selectedDoctorPhoto}
+              alt={selectedDoctorName ? `Portrait de ${selectedDoctorName} - Clinique 13-23` : "Équipe médicale de la Clinique 13-23 à votre écoute"}
+              className="w-full h-full object-cover object-top animate-fadeIn"
+              src={selectedDoctorPhoto}
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              fill
+              priority
+            />
+          </div>
+
+          {/* Contact overlay: docked directly beneath the photo on mobile, floats at bottom on desktop */}
+          <div className="relative z-10 lg:absolute lg:bottom-0 lg:left-0 lg:right-0 bg-clinique_bleue text-white p-5 sm:p-6 md:p-8 flex items-center gap-3.5 sm:gap-4 shadow-md lg:shadow-none" data-purpose="contact-overlay">
+            <div className="flex-shrink-0 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-white/30" aria-hidden="true">
+              <PhoneCall className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
             </div>
             <div className="min-w-0">
-              <span className="block text-xs uppercase tracking-wider text-blue-100 font-semibold mb-1">
+              <span className="block text-xs uppercase tracking-wider text-blue-100 font-semibold mb-0.5 sm:mb-1">
                 Urgences &amp; Accueil Téléphonique
               </span>
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight tabular-nums flex flex-wrap items-center gap-x-2">
+              <div className="text-lg sm:text-2xl md:text-3xl font-bold tracking-tight tabular-nums flex flex-wrap items-center gap-x-2">
                 <a
                   href="tel:34502653"
                   className="hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"

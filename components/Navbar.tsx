@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
-import { ArrowRight, Menu, X, Phone, Calendar } from 'lucide-react'
+import { ArrowRight, Menu, X, Phone, Calendar, ChevronRight } from 'lucide-react'
 
 const navLinks = [
   { href: '/', label: 'Accueil' },
@@ -23,14 +23,22 @@ const Navbar = () => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setMobileMenuOpen(false)
     }
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setMobileMenuOpen(false)
+    }
     window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+          {/* Logo */}
           <Link
             href="/"
             className="flex items-center space-x-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue rounded-md"
@@ -41,11 +49,12 @@ const Navbar = () => {
               alt="Clinique 13-23 — Accueil"
               width={150}
               height={56}
-              className="h-12 w-auto object-contain"
+              className="h-11 sm:h-12 w-auto object-contain"
               priority
             />
           </Link>
 
+          {/* Desktop Navigation Links */}
           <nav
             aria-label="Navigation principale"
             className="hidden md:flex space-x-7 items-center"
@@ -62,6 +71,7 @@ const Navbar = () => {
             ))}
           </nav>
 
+          {/* Desktop Call to Action */}
           <div className="hidden md:flex items-center gap-3">
             <Link
               className="group bg-clinique_bleue hover:bg-clinique_bleu_fonce active:scale-[0.985] text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 transition-all duration-150 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue"
@@ -72,91 +82,73 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Actions & Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
-            <Link
-              href={appointmentHref}
-              className="bg-clinique_green text-white px-4 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide inline-flex items-center gap-1.5"
-            >
-              <Calendar className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />
-              <span>Rendez-vous</span>
-            </Link>
+          {/* Mobile Hamburger Button */}
+          <div className="flex items-center md:hidden">
             <button
               type="button"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation-menu"
               aria-label={mobileMenuOpen ? 'Fermer le menu de navigation' : 'Ouvrir le menu de navigation'}
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="inline-flex items-center justify-center w-11 h-11 rounded-md text-slate-700 hover:text-clinique_bleue hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-clinique_bleue"
+              className="cursor-pointer inline-flex items-center justify-center w-11 h-11 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 hover:text-clinique_bleue hover:bg-blue-50 active:scale-95 transition-all focus-visible:outline-2 focus-visible:outline-clinique_bleue"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
+                <X className="w-6 h-6 text-clinique_bleue" strokeWidth={2.25} aria-hidden="true" />
               ) : (
-                <Menu className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
+                <Menu className="w-6 h-6 text-slate-800" strokeWidth={2.25} aria-hidden="true" />
               )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
+      {/* Mobile Navigation Drawer & Backdrop */}
       {mobileMenuOpen && (
-        <nav
-          id="mobile-navigation-menu"
-          aria-label="Menu mobile"
-          className="animate-fadeIn md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 shadow-lg space-y-1.5"
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center min-h-[44px] py-2.5 px-3 rounded-md text-base font-medium text-slate-800 hover:bg-blue-50 hover:text-clinique_bleue active:bg-blue-100/60"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
-            <Link
-              href={appointmentHref}
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full min-h-[48px] flex items-center justify-center gap-2 bg-clinique_bleue text-white py-3 px-5 rounded-full text-xs font-bold uppercase tracking-wider"
-            >
-              <Calendar className="w-4 h-4" strokeWidth={2} aria-hidden="true" />
-              <span>Prendre rendez-vous en ligne</span>
-            </Link>
-            <a
-              href="tel:34502653"
-              className="w-full min-h-[48px] flex items-center justify-center gap-2 bg-slate-100 text-slate-800 py-3 px-5 rounded-full text-xs font-bold uppercase tracking-wider tabular-nums"
-            >
-              <Phone className="w-4 h-4" strokeWidth={2} aria-hidden="true" />
-              <span>Appeler les urgences : 3450-2653</span>
-            </a>
-          </div>
-        </nav>
-      )}
+        <>
+          <div
+            className="fixed inset-0 top-20 bg-slate-950/40 backdrop-blur-xs md:hidden z-40 transition-opacity"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <nav
+            id="mobile-navigation-menu"
+            aria-label="Menu mobile"
+            className="relative z-50 md:hidden bg-white/98 backdrop-blur-xl border-t border-slate-100 px-5 pt-4 pb-7 shadow-2xl animate-fadeIn space-y-1.5"
+          >
+            <div className="flex flex-col space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between min-h-[46px] py-3 px-3.5 rounded-xl text-base font-semibold text-slate-800 hover:text-clinique_bleue hover:bg-blue-50/80 active:bg-blue-100 transition-colors"
+                >
+                  <span>{link.label}</span>
+                  <ChevronRight className="w-4 h-4 text-slate-400" strokeWidth={2} aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
 
-      {/* Thumb-Zone Bottom Quick-Action Bar on Mobile */}
-      <div
-        role="region"
-        aria-label="Actions rapides mobiles"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-4px_16px_rgba(0,0,0,0.06)] grid grid-cols-2 gap-2.5"
-      >
-        <a
-          href="tel:34502653"
-          className="min-h-[46px] inline-flex items-center justify-center gap-2 rounded-full border border-clinique_bleue/25 bg-blue-50/70 text-clinique_bleue px-3 py-2.5 text-xs font-bold uppercase tracking-wide tabular-nums active:bg-blue-100"
-        >
-          <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={2} aria-hidden="true" />
-          <span>3450-2653</span>
-        </a>
-        <Link
-          href={appointmentHref}
-          className="min-h-[46px] inline-flex items-center justify-center gap-1.5 rounded-full bg-clinique_green text-white px-3 py-2.5 text-xs font-bold uppercase tracking-wide active:bg-clinique_rose shadow-sm"
-        >
-          <span>Rendez-vous</span>
-          <ArrowRight className="w-4 h-4 flex-shrink-0" strokeWidth={2} aria-hidden="true" />
-        </Link>
-      </div>
+            <div className="mt-5 pt-4 border-t border-slate-100 space-y-3">
+              <Link
+                href={appointmentHref}
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full min-h-[48px] flex items-center justify-center gap-2 bg-clinique_green hover:bg-clinique_rose text-white py-3 px-5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md transition-colors"
+              >
+                <Calendar className="w-4 h-4" strokeWidth={2} aria-hidden="true" />
+                <span>Prendre un rendez-vous en ligne</span>
+              </Link>
+              <a
+                href="tel:34502653"
+                className="w-full min-h-[48px] flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-900 py-3 px-5 rounded-full text-xs font-bold uppercase tracking-wider tabular-nums transition-colors"
+              >
+                <Phone className="w-4 h-4 text-clinique_rose" strokeWidth={2} aria-hidden="true" />
+                <span>Urgences 24/7 : 3450-2653</span>
+              </a>
+            </div>
+          </nav>
+        </>
+      )}
     </header>
   )
 }
