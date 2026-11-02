@@ -26,7 +26,7 @@ const departments = [
       { id: 'dr-jean-baptiste', name: 'Dr. Marc Jean-Baptiste' },
       { id: 'dr-pierre-louis', name: 'Dr. Claire Pierre-Louis' },
     ],
-    image: '/doctor.jpg',
+    image: '/departments/medecine-familiale.jpg',
     imageAlt: 'Consultation de médecine familiale à la Clinique 13-23',
   },
   {
@@ -46,9 +46,8 @@ const departments = [
       { id: 'dr-steven-lee', name: 'Dr. Steven Lee' },
       { id: 'dr-adams', name: 'Dr. Michel Adams' },
     ],
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBv9BU2X1JdHwDMDKhWc3RUevLHIR2yejpAQOuow4IuNgYbQlGbm_9DaqvsV4INVtj87kvAOEK5ZPbfUV02ONsyYxk0hZtpeKqhJz0ZcQz8bn58X6se9JZsye-ObMm1eGZt9dZ46tWfZBhZ4X_wqrP4jY55c1lOv5rhmwGozcbG2VKzhv51yRwZ7s93T4sJxNbndkta_ErE_FX4PNxhbQr6MCjlvrUB0kRcXiCvWZHWo2cGf6ThUmXocci9B-hbTPKM8gg5meNmDmGc',
-    imageAlt: 'Département de Cardiologie',
+    image: '/departments/cardiologie.jpg',
+    imageAlt: 'Département de Cardiologie de la Clinique 13-23',
   },
   {
     id: 'pediatrie',
@@ -67,9 +66,8 @@ const departments = [
       { id: 'dr-wilson', name: 'Dr. Nadia Wilson' },
       { id: 'dr-brown', name: 'Dr. Patrick Brown' },
     ],
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBFhM_fD-UIlJxwx_fMER6Zk8M9tB8Z6-rQzoKeev3p0Z7WIerb4P_3-0Jp2N2W1qKec-MEyzHP3CGDbLj4SvGE3lnOQcXKRV-bFO7Lc05PGobW94-0VDwbsWyjuypA37lSx3_9QuTc0ye8LJ7tggOxaGtD3EnVkQEnNPSdQ1DyhkoDY-eLgFfnLWREYR7lInllEEF9DJVUuZDCBDagbevAMrSRYbN03EiFt7gXOa-TmjF_gi3p8taNh0vfz8rNOXp4ARdMb8d0akaa',
-    imageAlt: 'Département de Pédiatrie',
+    image: '/departments/pediatrie.jpg',
+    imageAlt: 'Département de Pédiatrie de la Clinique 13-23',
   },
   {
     id: 'neurologie',
@@ -88,9 +86,8 @@ const departments = [
       { id: 'dr-norman-colins', name: 'Dr. Norman Colins' },
       { id: 'dr-doe', name: 'Dr. Henri Laurent' },
     ],
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAAD8FFRsx9taFhR0DFnEoQsL80WZIhFrZdyAgh7ebqbWshLrsNhXSlXxbUDjfXoZ9JcWsSHDtyFWbOXWscvYb4qz496E3M9KMY67eeou4muodShVXQTyBQqlzlz0C3Iu6LJngWZ7IgyJ8FWholbV0QwORlIv2-FdSizHfXCMZ_l5dHsXCTFiOYkHiBxQIOfiXE-CACeVg21jrvERbTrnfutaT-kslr_dmvCdIEEaLCcW9ji4vWdUOwZGGG7pzdn6Gyu4SMFvbRR2ZV',
-    imageAlt: 'Département de Neurologie',
+    image: '/departments/neurologie.jpg',
+    imageAlt: 'Département de Neurologie de la Clinique 13-23',
   },
   {
     id: 'hepatologie',
@@ -108,9 +105,8 @@ const departments = [
     doctors: [
       { id: 'dr-david-kim', name: 'Dr. David Kim' },
     ],
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCyI_KbH-KK3qO4d3yIo6tCkhfiQh1540JpUgHCWKgkTLIJG6PIecYylQQMd9ouVe2mfs5uDKyZbxg5iu26bv8T8Zsaig2U4m64J9MKgFbfB3_7Q9m-weBejN6Znqifyz2Nl5vknQtWdzn7chYsdT0-5SY89E3e_HxiMsle_7FffZPp6h6SAPLW0tJgtQcGknCfm6iOa7Gi3-m9cBTjY6nKfbVbnGps2W0r9WwFQvaDwBpZouLReCsK-L5xx6QTxcbreMezLbDNYUkH',
-    imageAlt: 'Spécialiste en Gastro-entérologie et Hépatologie',
+    image: '/departments/hepatologie.jpg',
+    imageAlt: 'Spécialiste en Gastro-entérologie et Hépatologie de la Clinique 13-23',
   },
   {
     id: 'ophtalmologie',
@@ -128,9 +124,8 @@ const departments = [
     doctors: [
       { id: 'dr-sarah-lee', name: 'Dr. Sarah Lee' },
     ],
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCiZPKriD7h83pWRRdXKCBXLgILkgCmNU8VvV_W1Ld8MYLwirorH2IxmzZJI69brmH2fZQ0RlMYDed1KzgJ_dnMLLQwzfq6ghYe6OP0zZDAGuFIjiejCusC_uR2Pek4JborlLYLf1_-Fp4UlqWboX8hAOb88A_sW7Pk',
-    imageAlt: 'Département d’Ophtalmologie',
+    image: '/departments/ophtalmologie.jpg',
+    imageAlt: 'Département d’Ophtalmologie de la Clinique 13-23',
   },
 ]
 
@@ -326,15 +321,22 @@ export default function DepartmentsSection() {
                     <ChevronRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" strokeWidth={2.25} aria-hidden="true" />
                   </button>
                 </div>
-                <div className="w-full md:w-1/3 flex items-center">
-                  <Image
-                    src={activeDept.image}
-                    alt={activeDept.imageAlt}
-                    width={400}
-                    height={300}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="w-full h-auto object-cover rounded-lg shadow-md"
-                  />
+                <div className="w-full md:w-1/3 flex flex-col justify-center min-w-0">
+                  <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 group transition-all duration-300">
+                    <Image
+                      key={activeDept.id}
+                      src={activeDept.image}
+                      alt={activeDept.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                      priority={activeDept.id === 'medecine-familiale'}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
+                    <span className="absolute bottom-3 left-3 right-3 text-xs font-semibold text-white/95 bg-slate-900/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 truncate">
+                      {activeDept.title}
+                    </span>
+                  </div>
                 </div>
               </div>
             </article>
