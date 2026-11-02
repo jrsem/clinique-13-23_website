@@ -107,10 +107,10 @@ const Team = () => {
     return () => mm.revert()
   }, [])
 
-  const handleSelectDoctor = (departmentId: string, doctorId: string) => {
+  const handleSelectDoctor = (departmentId: string, doctorId: string, doctorImage?: string) => {
     window.dispatchEvent(
       new CustomEvent('clinique:select-department', {
-        detail: { department: departmentId, doctor: doctorId },
+        detail: { department: departmentId, doctor: doctorId, image: doctorImage },
       })
     )
     const section = document.getElementById('appointment-section')
@@ -173,7 +173,7 @@ const Team = () => {
                 </p>
                 <button
                   type="button"
-                  onClick={() => handleSelectDoctor(doc.department, doc.id)}
+                  onClick={() => handleSelectDoctor(doc.department, doc.id, doc.image)}
                   aria-label={`Prendre rendez-vous avec ${doc.name} en ${doc.specialty}`}
                   className="cursor-pointer w-full py-3 px-4 bg-clinique_bleue hover:bg-clinique_bleu_fonce text-white rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 mt-auto inline-flex items-center justify-center gap-2 shadow-sm group-hover:shadow group-hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue active:translate-y-0"
                 >
@@ -201,14 +201,14 @@ const Team = () => {
           <div className="flex flex-wrap gap-2.5 flex-shrink-0">
             <button
               type="button"
-              onClick={() => handleSelectDoctor('medecine-familiale', 'dr-jean-baptiste')}
+              onClick={() => handleSelectDoctor('medecine-familiale', 'dr-jean-baptiste', '/doctor.jpg')}
               className="cursor-pointer rounded-full bg-sky-badge hover:bg-blue-100 border border-blue-200 px-4 py-2 text-xs font-bold text-clinique_bleue transition-colors"
             >
               Médecine Familiale
             </button>
             <button
               type="button"
-              onClick={() => handleSelectDoctor('pediatrie', 'dr-wilson')}
+              onClick={() => handleSelectDoctor('pediatrie', 'dr-wilson', '/doctor-2.jpg')}
               className="cursor-pointer rounded-full bg-sky-badge hover:bg-blue-100 border border-blue-200 px-4 py-2 text-xs font-bold text-clinique_bleue transition-colors"
             >
               Pédiatrie

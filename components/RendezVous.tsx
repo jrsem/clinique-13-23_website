@@ -45,6 +45,28 @@ export const departmentDoctors: Record<string, { id: string, name: string }[]> =
   ]
 }
 
+export const doctorImages: Record<string, string> = {
+  "dr-norman-colins": "/doctor-1.jpg",
+  "dr-steven-lee": "/doctor-2.jpg",
+  "dr-david-kim": "/doctor-3.jpg",
+  "dr-sarah-lee": "/apointment.jpg",
+  "dr-jean-baptiste": "/doctor.jpg",
+  "dr-pierre-louis": "/doctor-2.jpg",
+  "dr-wilson": "/doctor-2.jpg",
+  "dr-brown": "/doctor-1.jpg",
+  "dr-adams": "/doctor-1.jpg",
+  "dr-doe": "/doctor-1.jpg",
+}
+
+export const getDoctorNameById = (doctorId?: string) => {
+  if (!doctorId) return ""
+  for (const dep of Object.values(departmentDoctors)) {
+    const found = dep.find((d) => d.id === doctorId)
+    if (found) return found.name
+  }
+  return ""
+}
+
 const getTodayIso = () => {
   const now = new Date()
   const year = now.getFullYear()
@@ -144,6 +166,7 @@ const RendezVous = () => {
   const [errorNudge, setErrorNudge] = useState(false)
   const [minDate, setMinDate] = useState("2026-01-01")
   const [submittedData, setSubmittedData] = useState<(FormData & { reference: string }) | null>(null)
+  const [selectedDoctorPhoto, setSelectedDoctorPhoto] = useState<string>("/apointment.jpg")
 
   const {
     register,
@@ -188,17 +211,27 @@ const RendezVous = () => {
   }, [selectedDepartment, selectedDoctorId, setValue])
 
   useEffect(() => {
+    if (selectedDoctorId && doctorImages[selectedDoctorId]) {
+      setSelectedDoctorPhoto(doctorImages[selectedDoctorId])
+    }
+  }, [selectedDoctorId])
+
+  useEffect(() => {
     let highlightTimer: ReturnType<typeof setTimeout> | null = null
     const handlePreselect = (e: Event) => {
-      const detail = (e as CustomEvent<{ department?: string; doctor?: string }>).detail
+      const detail = (e as CustomEvent<{ department?: string; doctor?: string; image?: string }>).detail
       if (detail?.department && departmentLabels[detail.department]) {
         setSubmittedData(null)
         setStepDirection("forward")
+        setStep(1)
         setValue("department", detail.department, { shouldValidate: true })
         if (detail.doctor) {
-          setTimeout(() => {
-            setValue("doctor", detail.doctor!, { shouldValidate: true })
-          }, 0)
+          setValue("doctor", detail.doctor, { shouldValidate: true })
+        }
+        if (detail.image) {
+          setSelectedDoctorPhoto(detail.image)
+        } else if (detail.doctor && doctorImages[detail.doctor]) {
+          setSelectedDoctorPhoto(doctorImages[detail.doctor])
         }
         setPreselectPulse((prev) => prev + 1)
         setIsPreselectHighlighted(true)
@@ -251,6 +284,7 @@ const RendezVous = () => {
     setSubmittedData(null)
     setStepDirection("backward")
     setStep(1)
+    setSelectedDoctorPhoto("/apointment.jpg")
   }
 
   const stepAnimationClass = `${
@@ -260,6 +294,7 @@ const RendezVous = () => {
   const selectedDoctorName =
     (selectedDepartment &&
       departmentDoctors[selectedDepartment]?.find((d) => d.id === selectedDoctorId)?.name) ||
+    getDoctorNameById(selectedDoctorId) ||
     ""
 
   const sectionRef = useRef<HTMLElement>(null)
@@ -300,14 +335,16 @@ const RendezVous = () => {
         data-purpose="booking-container"
       >
         {/* Image & Emergency Contact Column */}
-        <div className="relative w-full lg:w-5/12 min-h-[240px] sm:min-h-[320px] lg:min-h-[580px] flex flex-col justify-end" data-purpose="image-column">
+        <div className="relative w-full lg:w-5/12 min-h-[260px] sm:min-h-[340px] lg:min-h-[580px] flex flex-col justify-end overflow-hidden" data-purpose="image-column">
           <Image
-            alt="Équipe médicale de la Clinique 13-23 à votre écoute"
-            className="w-full h-full object-cover object-center absolute inset-0"
-            src="/apointment.jpg"
+            key={selectedDoctorPhoto}
+            alt={selectedDoctorName ? `Portrait de ${selectedDoctorName} - Clinique 13-23` : "Équipe médicale de la Clinique 13-23 à votre écoute"}
+            className="w-full h-full object-cover object-top absolute inset-0 animate-fadeIn"
+            src={selectedDoctorPhoto}
             sizes="(max-width: 1024px) 100vw, 42vw"
             width={600}
             height={700}
+            priority
           />
           <div className="relative z-10 bg-clinique_bleue text-white p-6 md:p-8 flex items-center gap-4" data-purpose="contact-overlay">
             <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full border-2 border-white/30" aria-hidden="true">
