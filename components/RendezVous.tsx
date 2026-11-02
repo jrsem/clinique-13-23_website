@@ -852,12 +852,12 @@ const RendezVous = () => {
               )}
 
               {/* Navigation Buttons */}
-              <div className="pt-4 flex flex-wrap items-center justify-between gap-4">
+              <div className="pt-4 flex items-center justify-between gap-3">
                 {step > 1 ? (
                   <button
                     type="button"
                     onClick={prevStep}
-                    className="cursor-pointer bg-slate-200 hover:bg-slate-300 active:scale-[0.985] transition-all duration-150 text-slate-800 px-6 py-3.5 rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm"
+                    className="cursor-pointer bg-slate-100 hover:bg-slate-200 border border-slate-200 active:scale-[0.985] transition-all duration-150 text-slate-700 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm whitespace-nowrap flex-shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue"
                   >
                     Retour
                   </button>
@@ -869,7 +869,7 @@ const RendezVous = () => {
                   <button
                     type="button"
                     onClick={nextStep}
-                    className="group cursor-pointer bg-clinique_bleue hover:bg-clinique_bleu_fonce active:scale-[0.985] transition-all duration-150 text-white px-8 py-3.5 rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm ml-auto inline-flex items-center gap-2"
+                    className="group cursor-pointer bg-clinique_bleue hover:bg-clinique_bleu_fonce active:scale-[0.985] transition-all duration-150 text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm ml-auto inline-flex items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue"
                   >
                     <span>Étape suivante</span>
                     <ChevronRight className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" strokeWidth={2.25} aria-hidden="true" />
@@ -880,9 +880,9 @@ const RendezVous = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group cursor-pointer bg-clinique_green hover:bg-clinique_rose active:scale-[0.985] disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-150 text-white px-8 py-3.5 rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm inline-flex items-center justify-center gap-2 ml-auto"
+                    className="group cursor-pointer bg-clinique_green hover:bg-clinique_rose active:scale-[0.985] disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-150 text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm inline-flex items-center justify-center gap-1.5 sm:gap-2 ml-auto whitespace-nowrap shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_green"
                   >
-                    <span>{isSubmitting ? "Envoi de la demande..." : "Envoyer ma demande"}</span>
+                    <span>{isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}</span>
                     <ChevronRight className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" strokeWidth={2.25} aria-hidden="true" />
                   </button>
                 )}
