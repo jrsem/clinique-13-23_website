@@ -14,32 +14,28 @@ const doctorsList = [
     name: 'Dr. Norman Colins',
     specialty: 'Neurologie & Système Nerveux',
     department: 'neurologie',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCiZPKriD7h83pWRRdXKCBXLgILkgCmNU8VvV_W1Ld8MYLwirorH2IxmzZJI69brmH2fZQ0RlMYDed1KzgJ_dnMLLQwzfq6ghYe6OP0zZDAGuFIjiejCusC_uR2Pek4JborlLYLf1_-Fp4UlqWboX8hAOb88A_sW7Pk',
+    image: '/doctor-1.jpg',
   },
   {
     id: 'dr-steven-lee',
     name: 'Dr. Steven Lee',
     specialty: 'Cardiologie & Santé Cardiovasculaire',
     department: 'cardiologie',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAAD8FFRsx9taFhR0DFnEoQsL80WZIhFrZdyAgh7ebqbWshLrsNhXSlXxbUDjfXoZ9JcWsSHDtyFWbOXWscvYb4qz496E3M9KMY67eeou4muodShVXQTyBQqlzlz0C3Iu6LJngWZ7IgyJ8FWholbV0QwORlIv2-FdSizHfXCMZ_l5dHsXCTFiOYkHiBxQIOfiXE-CACeVg21jrvERbTrnfutaT-kslr_dmvCdIEEaLCcW9ji4vWdUOwZGGG7pzdn6Gyu4SMFvbRR2ZV',
+    image: '/doctor-2.jpg',
   },
   {
     id: 'dr-david-kim',
     name: 'Dr. David Kim',
     specialty: 'Gastro-entérologie & Hépatologie',
     department: 'hepatologie',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCyI_KbH-KK3qO4d3yIo6tCkhfiQh1540JpUgHCWKgkTLIJG6PIecYylQQMd9ouVe2mfs5uDKyZbxg5iu26bv8T8Zsaig2U4m64J9MKgFbfB3_7Q9m-weBejN6Znqifyz2Nl5vknQtWdzn7chYsdT0-5SY89E3e_HxiMsle_7FffZPp6h6SAPLW0tJgtQcGknCfm6iOa7Gi3-m9cBTjY6nKfbVbnGps2W0r9WwFQvaDwBpZouLReCsK-L5xx6QTxcbreMezLbDNYUkH',
+    image: '/doctor-3.jpg',
   },
   {
     id: 'dr-sarah-lee',
     name: 'Dr. Sarah Lee',
     specialty: 'Ophtalmologie & Soins de la Vue',
     department: 'ophtalmologie',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBFhM_fD-UIlJxwx_fMER6Zk8M9tB8Z6-rQzoKeev3p0Z7WIerb4P_3-0Jp2N2W1qKec-MEyzHP3CGDbLj4SvGE3lnOQcXKRV-bFO7Lc05PGobW94-0VDwbsWyjuypA37lSx3_9QuTc0ye8LJ7tggOxaGtD3EnVkQEnNPSdQ1DyhkoDY-eLgFfnLWREYR7lInllEEF9DJVUuZDCBDagbevAMrSRYbN03EiFt7gXOa-TmjF_gi3p8taNh0vfz8rNOXp4ARdMb8d0akaa',
+    image: '/apointment.jpg',
   },
 ]
 
@@ -155,32 +151,37 @@ const Team = () => {
           data-purpose="doctors-listing"
         >
           {doctorsList.map((doc) => (
-            <article
-              key={doc.id}
-              data-gsap="doctor-card"
-              className="doctor-card bg-white rounded-xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] transition-all duration-300 border border-slate-100 flex flex-col items-center text-center min-w-0"
-            >
-              <div className="relative w-full aspect-square bg-portrait-sky rounded-lg mb-4 overflow-hidden">
-                <Image
-                  alt={`Portrait de ${doc.name}, spécialiste en ${doc.specialty}`}
-                  className="object-cover"
-                  src={doc.image}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 break-words">{doc.name}</h3>
-              <p className="text-slate-600 text-sm font-medium mt-1 mb-5">{doc.specialty}</p>
-              <button
-                type="button"
-                onClick={() => handleSelectDoctor(doc.department, doc.id)}
-                aria-label={`Prendre rendez-vous avec ${doc.name} en ${doc.specialty}`}
-                className="cursor-pointer w-full py-3 px-4 bg-clinique_bleue hover:bg-clinique_bleu_fonce text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors mt-auto inline-flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue"
+            <div key={doc.id} data-gsap="doctor-card" className="h-full">
+              <article
+                className="group h-full bg-white rounded-2xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_-12px_rgba(26,54,93,0.16)] hover:-translate-y-2 border border-slate-100 hover:border-clinique_bleue/30 transition-all duration-300 ease-out flex flex-col items-center text-center min-w-0"
               >
-                <Calendar className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />
-                <span>Prendre rendez-vous</span>
-              </button>
-            </article>
+                <div className="relative w-full aspect-square bg-portrait-sky rounded-xl mb-4 overflow-hidden">
+                  <Image
+                    alt={`Portrait de ${doc.name}, spécialiste en ${doc.specialty}`}
+                    className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+                    src={doc.image}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-clinique_bleue/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 group-hover:text-clinique_bleue transition-colors duration-300 break-words">
+                  {doc.name}
+                </h3>
+                <p className="text-slate-600 text-sm font-medium mt-1 mb-5 group-hover:text-slate-800 transition-colors duration-200">
+                  {doc.specialty}
+                </p>
+                <button
+                  type="button"
+                  onClick={() => handleSelectDoctor(doc.department, doc.id)}
+                  aria-label={`Prendre rendez-vous avec ${doc.name} en ${doc.specialty}`}
+                  className="cursor-pointer w-full py-3 px-4 bg-clinique_bleue hover:bg-clinique_bleu_fonce text-white rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 mt-auto inline-flex items-center justify-center gap-2 shadow-sm group-hover:shadow group-hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinique_bleue active:translate-y-0"
+                >
+                  <Calendar className="w-3.5 h-3.5 transition-transform duration-300 group-hover:scale-110" strokeWidth={2} aria-hidden="true" />
+                  <span>Prendre rendez-vous</span>
+                </button>
+              </article>
+            </div>
           ))}
         </div>
 
