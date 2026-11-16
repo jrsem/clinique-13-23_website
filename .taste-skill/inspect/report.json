@@ -1,0 +1,2030 @@
+{
+ "url": "http://localhost:3099",
+ "at": "2026-11-02T15:50:39.162Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.78,
+    0.4,
+    0.38,
+    0.38,
+    0.38,
+    0.38,
+    0.38
+   ],
+   "motion": {
+    "elements": 43,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 41,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6258,
+     "screens": 7,
+     "words": 694,
+     "img": 11,
+     "video": 0,
+     "canvas": 0,
+     "svg": 15,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "image?url=%2Fhero.jpg&w=750&q=75",
+      "image?url=%2Fdepartments%2Fmedecine-familiale.jp",
+      "image?url=%2Fdepartments%2Fcardiologie.jpg&w=384",
+      "image?url=%2Fdepartments%2Fpediatrie.jpg&w=384&q",
+      "image?url=%2Fdepartments%2Fneurologie.jpg&w=384&",
+      "image?url=%2Fdepartments%2Fophtalmologie.jpg&w=3",
+      "image?url=%2Fdoctor-1.jpg&w=750&q=75",
+      "image?url=%2Fapointment.jpg&w=640&q=75"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Soins attentifs, urgences 24/7.",
+     "words": 4,
+     "chars": 31,
+     "lines": 2,
+     "size": 76,
+     "vw": 5.3,
+     "font": "Boska",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.4,
+     "top": 266,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Soins attentifs, urgences 24/7.",
+     "words": 4,
+     "lines": 2,
+     "size": 76,
+     "font": "Boska"
+    },
+    "headings": [
+     {
+      "text": "Soins attentifs, urgences 24/7.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 76,
+      "vw": 5.3,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 266,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Carte des soins",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 1716,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Une écoute médicale attentive",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.43,
+      "top": 3746,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Itinéraire de votre consultation",
+      "words": 4,
+      "chars": 32,
+      "lines": 2,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.32,
+      "top": 4336,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Prendre un rendez-vous en ligne",
+      "words": 5,
+      "chars": 31,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.44,
+      "top": 5089,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "3450-2653",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.09,
+      "top": 5613,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "5523-2555",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.09,
+      "top": 5613,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "Boska",
+       "share": 0.11,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      24,
+      30,
+      36,
+      40,
+      44,
+      48,
+      76
+     ],
+     "sizeCount": 14,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.6
+     },
+     "measureChars": 63,
+     "max": {
+      "size": 76,
+      "vw": 5.3,
+      "font": "Boska",
+      "text": "Soins attentifs, urgences 24/7."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebe5e3",
+     "bodyBgHsl": {
+      "h": 15,
+      "s": 0.17,
+      "l": 0.91
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebe5e3",
+       "top": 0,
+       "hsl": {
+        "h": 15,
+        "s": 0.17,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e1dad7",
+       "top": 96,
+       "hsl": {
+        "h": 18,
+        "s": 0.14,
+        "l": 0.86
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1f2428",
+       "share": 0.5
+      },
+      {
+       "color": "#40474e",
+       "share": 0.36
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.05
+      },
+      {
+       "color": "#45556c",
+       "share": 0.03
+      },
+      {
+       "color": "#11683d",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#11683d",
+      "hsl": {
+       "h": 150,
+       "s": 0.72,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 6,
+     "radius": 6,
+     "height": 60,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Prendre rendez-vous",
+      "Urgences : 3450-2653",
+      "Médecine générale",
+      "Pédiatrie & Famille",
+      "Bilan & Prélèvement"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 11,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 8,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3177
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "boska"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6258,
+    "margins": {
+     "left": 88,
+     "right": 106
+    },
+    "sections": [
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 80,
+      "height": 908,
+      "words": 73,
+      "media": 1,
+      "middle": 68,
+      "heading": {
+       "text": "Soins attentifs, urgences 24/7.",
+       "size": 76,
+       "tag": "h1"
+      },
+      "left": 88,
+      "right": 32,
+      "textLeft": 88,
+      "textRight": 56,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 988,
+      "height": 584,
+      "words": 158,
+      "media": 0,
+      "middle": 65,
+      "heading": {
+       "text": "Permanence & Écoute",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 200,
+      "right": 275,
+      "textLeft": 200,
+      "textRight": 275,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#carte-des-soins.relative.px-4",
+      "tag": "section",
+      "top": 1572,
+      "height": 1892,
+      "words": 191,
+      "media": 5,
+      "middle": 16,
+      "heading": {
+       "text": "Carte des soins",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 144,
+      "right": 144,
+      "textLeft": 144,
+      "textRight": 191,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 3464,
+      "height": 792,
+      "words": 38,
+      "media": 1,
+      "middle": 92,
+      "heading": {
+       "text": "Une écoute médicale attentive",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 116,
+      "right": 145,
+      "textLeft": 748,
+      "textRight": 145,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 4256,
+      "height": 681,
+      "words": 96,
+      "media": 0,
+      "middle": 368,
+      "heading": {
+       "text": "Itinéraire de votre consultation",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 144,
+      "right": 164,
+      "textLeft": 144,
+      "textRight": 164,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#appointment-section.w-full.bg-[#ebe5e3]",
+      "tag": "section",
+      "top": 4937,
+      "height": 846,
+      "words": 65,
+      "media": 1,
+      "middle": 56,
+      "heading": {
+       "text": "Prendre un rendez-vous en ligne",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 80,
+      "right": 136,
+      "textLeft": 176,
+      "textRight": 175,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer#contact.pt-16.pb-20",
+      "tag": "footer",
+      "top": 5783,
+      "height": 476,
+      "words": 89,
+      "media": 0,
+      "middle": 166,
+      "heading": {
+       "text": "Départements",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 80,
+      "right": 80,
+      "textLeft": 80,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Soins attentifs, urgences 24/7.",
+      "size": 76,
+      "top": 266,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 204,
+      "n": 8
+     },
+     {
+      "x": 192,
+      "n": 7
+     },
+     {
+      "x": 144,
+      "n": 3
+     },
+     {
+      "x": 88,
+      "n": 2
+     },
+     {
+      "x": 669,
+      "n": 2
+     },
+     {
+      "x": 748,
+      "n": 2
+     },
+     {
+      "x": 768,
+      "n": 2
+     },
+     {
+      "x": 957,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 0,
+     "y": 600,
+     "w": 1440,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.8,
+    0.62,
+    0.62,
+    0.58,
+    0.62,
+    0.62,
+    0.62,
+    0.62,
+    0.62
+   ],
+   "motion": {
+    "elements": 43,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 41,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8893,
+     "screens": 8.7,
+     "words": 694,
+     "img": 11,
+     "video": 0,
+     "canvas": 0,
+     "svg": 15,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "image?url=%2Fhero.jpg&w=828&q=75",
+      "image?url=%2Fdepartments%2Fmedecine-familiale.jp",
+      "image?url=%2Fdepartments%2Fcardiologie.jpg&w=384",
+      "image?url=%2Fdepartments%2Fpediatrie.jpg&w=384&q",
+      "image?url=%2Fdepartments%2Fneurologie.jpg&w=384&",
+      "image?url=%2Fdepartments%2Fophtalmologie.jpg&w=3",
+      "image?url=%2Fdoctor-1.jpg&w=828&q=75",
+      "image?url=%2Fapointment.jpg&w=828&q=75"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Soins attentifs, urgences 24/7.",
+     "words": 4,
+     "chars": 31,
+     "lines": 2,
+     "size": 60,
+     "vw": 7.8,
+     "font": "Boska",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.6,
+     "top": 223,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Soins attentifs, urgences 24/7.",
+     "words": 4,
+     "lines": 2,
+     "size": 60,
+     "font": "Boska"
+    },
+    "headings": [
+     {
+      "text": "Soins attentifs, urgences 24/7.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 60,
+      "vw": 7.8,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.6,
+      "top": 223,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Carte des soins",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 2320,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Une écoute médicale attentive",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 5568,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Itinéraire de votre consultation",
+      "words": 4,
+      "chars": 32,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 6060,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "3450-2653",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 7415,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "5523-2555",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.16,
+      "top": 7415,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Prendre un rendez-vous en ligne",
+      "words": 5,
+      "chars": 31,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 7537,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "Boska",
+       "share": 0.11,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      24,
+      30,
+      36,
+      60
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.6
+     },
+     "measureChars": 59,
+     "max": {
+      "size": 60,
+      "vw": 7.8,
+      "font": "Boska",
+      "text": "Soins attentifs, urgences 24/7."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebe5e3",
+     "bodyBgHsl": {
+      "h": 15,
+      "s": 0.17,
+      "l": 0.91
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebe5e3",
+       "top": 0,
+       "hsl": {
+        "h": 15,
+        "s": 0.17,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e1dad7",
+       "top": 96,
+       "hsl": {
+        "h": 18,
+        "s": 0.14,
+        "l": 0.86
+       }
+      },
+      {
+       "color": "#d7cecb",
+       "top": 3712,
+       "hsl": {
+        "h": 15,
+        "s": 0.13,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#1f2428",
+       "top": 6977,
+       "hsl": {
+        "h": 207,
+        "s": 0.13,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ded7d4",
+       "top": 6977,
+       "hsl": {
+        "h": 18,
+        "s": 0.13,
+        "l": 0.85
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1f2428",
+       "share": 0.5
+      },
+      {
+       "color": "#40474e",
+       "share": 0.36
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.05
+      },
+      {
+       "color": "#45556c",
+       "share": 0.03
+      },
+      {
+       "color": "#11683d",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#11683d",
+      "hsl": {
+       "h": 150,
+       "s": 0.72,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 6,
+     "radius": 6,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Prendre rendez-vous",
+      "Urgences : 3450-2653",
+      "Médecine générale",
+      "Pédiatrie & Famille",
+      "Bilan & Prélèvement"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 11,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 8,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4568
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.39
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "boska"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8893,
+    "margins": {
+     "left": 24,
+     "right": 37
+    },
+    "sections": [
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 80,
+      "height": 1396,
+      "words": 73,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Soins attentifs, urgences 24/7.",
+       "size": 60,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 64,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 1476,
+      "height": 700,
+      "words": 158,
+      "media": 0,
+      "middle": 64,
+      "heading": {
+       "text": "Permanence & Écoute",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 57,
+      "textLeft": 24,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#carte-des-soins.relative.px-4",
+      "tag": "section",
+      "top": 2176,
+      "height": 2632,
+      "words": 191,
+      "media": 5,
+      "middle": 0,
+      "heading": {
+       "text": "Carte des soins",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 0,
+      "textLeft": 24,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 4808,
+      "height": 1172,
+      "words": 38,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 24,
+      "right": 114,
+      "textLeft": 24,
+      "textRight": 125,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 5980,
+      "height": 901,
+      "words": 96,
+      "media": 0,
+      "middle": 44,
+      "heading": {
+       "text": "Itinéraire de votre consultation",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 164,
+      "textLeft": 24,
+      "textRight": 164,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#appointment-section.w-full.bg-[#ebe5e3]",
+      "tag": "section",
+      "top": 6881,
+      "height": 1342,
+      "words": 65,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "3450-2653",
+       "size": 30,
+       "tag": "a"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 72,
+      "textRight": 105,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer#contact.pt-16.pb-20",
+      "tag": "footer",
+      "top": 8222,
+      "height": 671,
+      "words": 89,
+      "media": 0,
+      "middle": 44,
+      "heading": {
+       "text": "Départements",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Soins attentifs, urgences 24/7.",
+      "size": 60,
+      "top": 223,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 9
+     },
+     {
+      "x": 84,
+      "n": 8
+     },
+     {
+      "x": 64,
+      "n": 7
+     },
+     {
+      "x": 48,
+      "n": 2
+     },
+     {
+      "x": 557,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.77,
+    0.72,
+    0.72,
+    0.72,
+    0.72,
+    0.72,
+    0.72,
+    0.72,
+    0.72,
+    0.72,
+    0.72,
+    0.69
+   ],
+   "motion": {
+    "elements": 43,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 41,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 9533,
+     "screens": 11.3,
+     "words": 685,
+     "img": 11,
+     "video": 0,
+     "canvas": 0,
+     "svg": 15,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "image?url=%2Fhero.jpg&w=640&q=75",
+      "image?url=%2Fdepartments%2Fmedecine-familiale.jp",
+      "image?url=%2Fdepartments%2Fcardiologie.jpg&w=256",
+      "image?url=%2Fdepartments%2Fpediatrie.jpg&w=256&q",
+      "image?url=%2Fdepartments%2Fneurologie.jpg&w=256&",
+      "image?url=%2Fdepartments%2Fophtalmologie.jpg&w=2",
+      "image?url=%2Fdoctor-1.jpg&w=640&q=75",
+      "image?url=%2Fapointment.jpg&w=640&q=75"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Soins attentifs, urgences 24/7.",
+     "words": 4,
+     "chars": 31,
+     "lines": 2,
+     "size": 48,
+     "vw": 12.3,
+     "font": "Boska",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 179,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Soins attentifs, urgences 24/7.",
+     "words": 4,
+     "lines": 2,
+     "size": 48,
+     "font": "Boska"
+    },
+    "headings": [
+     {
+      "text": "Soins attentifs, urgences 24/7.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 48,
+      "vw": 12.3,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 179,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Carte des soins",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 2582,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Médecine générale & suivi",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 4260,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "Une écoute médicale attentive",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5682,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Itinéraire de votre consultation",
+      "words": 4,
+      "chars": 32,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Boska",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 6205,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Prendre un rendez-vous en ligne",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Boska",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 7554,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Times New Roman",
+       "share": 0.88,
+       "mono": false
+      },
+      {
+       "family": "Boska",
+       "share": 0.12,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      24,
+      30,
+      48
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Times New Roman",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.3
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 48,
+      "vw": 12.3,
+      "font": "Boska",
+      "text": "Soins attentifs, urgences 24/7."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebe5e3",
+     "bodyBgHsl": {
+      "h": 15,
+      "s": 0.17,
+      "l": 0.91
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebe5e3",
+       "top": 0,
+       "hsl": {
+        "h": 15,
+        "s": 0.17,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e1dad7",
+       "top": 76,
+       "hsl": {
+        "h": 18,
+        "s": 0.14,
+        "l": 0.86
+       }
+      },
+      {
+       "color": "#d7cecb",
+       "top": 5116,
+       "hsl": {
+        "h": 15,
+        "s": 0.13,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#1f2428",
+       "top": 7126,
+       "hsl": {
+        "h": 207,
+        "s": 0.13,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#ded7d4",
+       "top": 7126,
+       "hsl": {
+        "h": 18,
+        "s": 0.13,
+        "l": 0.85
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1f2428",
+       "share": 0.5
+      },
+      {
+       "color": "#40474e",
+       "share": 0.36
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.04
+      },
+      {
+       "color": "#45556c",
+       "share": 0.03
+      },
+      {
+       "color": "#11683d",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#d7cecb",
+      "hsl": {
+       "h": 15,
+       "s": 0.13,
+       "l": 0.82
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 6,
+     "radius": 6,
+     "height": 60,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Prendre rendez-vous",
+      "Urgences : 3450-2653",
+      "Médecine générale",
+      "Pédiatrie & Famille",
+      "Bilan & Prélèvement"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 11,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 8,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4620
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.55
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "boska"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 9533,
+    "margins": {
+     "left": 16,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 64,
+      "height": 1429,
+      "words": 73,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Soins attentifs, urgences 24/7.",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 40,
+      "textRight": 46,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 1493,
+      "height": 973,
+      "words": 158,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 17,
+      "textLeft": 16,
+      "textRight": 17,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#carte-des-soins.relative.px-4",
+      "tag": "section",
+      "top": 2466,
+      "height": 2571,
+      "words": 191,
+      "media": 5,
+      "middle": 0,
+      "heading": {
+       "text": "Carte des soins",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 0,
+      "textLeft": 16,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 5036,
+      "height": 1089,
+      "words": 38,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.relative.px-4",
+      "tag": "section",
+      "top": 6125,
+      "height": 937,
+      "words": 96,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Itinéraire de votre consultation",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 30,
+      "textLeft": 16,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#appointment-section.w-full.bg-[#ebe5e3]",
+      "tag": "section",
+      "top": 7062,
+      "height": 1378,
+      "words": 65,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Prendre un rendez-vous en ligne",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer#contact.pt-16.pb-20",
+      "tag": "footer",
+      "top": 8440,
+      "height": 1093,
+      "words": 89,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Départements",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 25,
+      "textLeft": 16,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Soins attentifs, urgences 24/7.",
+      "size": 48,
+      "top": 179,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 36,
+      "n": 11
+     },
+     {
+      "x": 16,
+      "n": 9
+     },
+     {
+      "x": 48,
+      "n": 8
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "14 different font sizes (13, 14, 15, 16, 18, 19, 20, 24, 30, 36, 40, 44, 48, 76).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 88px on the left, 106px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "long-pin",
+   "width": 1440,
+   "message": "The same large text stays on screen for 6 screens in a row: \"Carte des soins\"",
+   "fix": "A pinned element earns two screens, and something must change at each. Shorten the run or give every screen its own content."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/desktop-fold.jpg",
+   "pages": [
+    "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/desktop-page-01.jpg",
+    "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/tablet-fold.jpg",
+   "pages": [
+    "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/tablet-page-01.jpg",
+    "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/mobile-fold.jpg",
+   "pages": [
+    "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/mobile-page-01.jpg",
+    "/home/junior/Videos/SDD/clinique-13-23_website/.taste-skill/inspect/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
